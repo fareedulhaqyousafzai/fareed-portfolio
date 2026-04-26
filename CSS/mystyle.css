@@ -1810,5 +1810,25 @@ body {
   width: 80%;
 
 }
+  
 }
+}
+
+html, body {
+  overflow-x: hidden; /* Yeh side scroll ko completely block kar dega */
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+}
+.custom-shape-divider-bottom-1716734170 {
+  width: 100%;
+  overflow: hidden; /* Wave ko bahar nikalne se rokega */
+}
+@media (max-width: 768px) {
+  .container-nav {
+    width: 92%; /* 100% se thora kam rakhein */
+    left: 4%; /* Margin ki jagah left use karein agar position absolute/fixed hai */
+    margin-left: 0;
+    box-sizing: border-box; /* Padding ko width ke andar count karega */
+  }
 }
