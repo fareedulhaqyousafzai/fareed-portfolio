@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@700;900&display=swap');
+
 
 /* ========================================= */
 /* GLOBAL VARIABLES & RESET                  */
@@ -20,19 +20,23 @@
 :root {
   --main-color: #1095d5;
   --body: #1c354f;
+  /* --body:#002147; */
   --white-color: #ffffff;
   --dark-color: #1c354f;
   --font-color: #ffffff;
   --b-shadow-main-color: 0px 5px 15px rgba(16, 149, 213, 0.4);
   --b-shadow-main-color-hover: 0px 5px 15px rgba(16, 149, 213, 0.7);
   --b-shadow-black-color: 0 4px 15px rgba(0, 0, 0, 0.3);
-  --browser-bar: #2d2d2d;
-  --browser-border: #2d2d2d;
-  --b-shadow-main-color-w-border: rgba(16, 149, 213, 0.5) 0px 6px 24px 0px,
+  --browser-bar: #2d2d2d;     /* Dark mode mein dark patti */
+  --browser-border: #2d2d2d;  /* Dark mode mein dark border */
+   --b-shadow-main-color-w-border: rgba(16, 149, 213, 0.5) 0px 6px 24px 0px,
     rgba(16, 149, 213, 0.8) 0px 0px 0px 1px;
-  --b-shadow-black-color-w-border: rgba(50, 56, 58, 0.5) 0px 6px 24px 0px,
-    rgba(3, 4, 4, 0.8) 0px 0px 0px 0px;
+    --b-shadow-black-color-w-border: rgba(50, 56, 58, 0.5) 0px 6px 24px 0px,
+      rgba(3, 4, 4, 0.8) 0px 0px 0px 0px;
 }
+
+
+
 
 html {
   font-size: 50%;
@@ -69,9 +73,11 @@ p, li, a {
   font-style: italic;
 }
 
+
+
+
 .header-divider {
   width: 50rem;
-  max-width: 100%; /* FIX: Prevent overflow on small screens */
   height: 3px;
   background-color: var(--main-color);
   margin: 0 auto;
@@ -116,8 +122,8 @@ p, li, a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: var(--b-shadow-black-color);
-  background-color: color-mix(in srgb, var(--body) 70%, transparent);
+   box-shadow: var(--b-shadow-black-color);
+  background-color: var(--body 70%);
   backdrop-filter: blur(12px);
   z-index: 10000;
   padding: 1rem;
@@ -164,10 +170,6 @@ nav li a:hover::after {
 
 nav i {
   color: var(--font-color);
-}
-
-#toggle_button {
-  display: none;
 }
 
 /* ========================================= */
@@ -232,6 +234,8 @@ nav i {
   background-color: var(--font-color);
 }
 
+
+
 /* ========================================= */
 /* HERO SECTION & IMAGE GLOB                 */
 /* ========================================= */
@@ -266,7 +270,7 @@ nav i {
 }
 
 .hero-img {
-  position: relative;
+ position: relative;
   z-index: 2;
   width: 65%; 
   height: 90%;
@@ -285,6 +289,21 @@ nav i {
   0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
   50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
   100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.main-section-image {
+  width: 25%;
+}
+
+.main-section-image img {
+  width: 80%;
+  height: auto;
+  transform: rotate(auto);
+  transition: all 0.3s;
+}
+
+.main-section-image img:hover {
+  transform: translateY(-10px) scale(1.005) translateZ(0);
 }
 
 /* ========================================= */
@@ -341,7 +360,7 @@ nav i {
 
 .main-contact-btn:hover {
   background-color: var(--font-color);
-  color: var(--dark-color);
+  color: var(--dark);
   transform: translateY(-3px);
   box-shadow: var(--b-shadow-main-color-hover);
 }
@@ -378,7 +397,7 @@ nav i {
 .custom-shape-divider-bottom-1716734170 svg {
   position: relative;
   display: block;
-  width: 100%; /* FIX: Removed calc(100% + 1.3px) which caused side scroll */
+  width: calc(100% + 1.3px);
   height: 150px;
 }
 
@@ -396,50 +415,65 @@ nav i {
   display: flex;
   justify-content: center;
   position: relative;
+
 }
 
 .about-glass-container {
   padding: 10rem 5rem;
   box-shadow: var(--b-shadow-black-color);
+  
+  /* Sahi Background (var ki jagah rgba use karein taake glass effect chale) */
+  /* background-color:var(--body 0.7);  */
   background-color: color-mix(in srgb, var(--body) 70%, transparent);
+  
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); /* Safari/iPhones ke liye */
+
   border-radius: 20px;
   width: 90%;
   max-width: 1700px;
   height: auto;
   position: relative;
+  
+  /* JADOO: Glass ko upar rakhne ke liye */
   z-index: 1; 
 }
 
 .about p {
   margin-top: 40px;
   font-size: 2.2rem;
-  line-height: 1.5;
+  line-height: 1;
   word-spacing: 4px;
   font-style: italic;
   font-weight: 600;
-  text-transform: none;
+ text-transform: none;
   text-align: center;
-  margin-bottom: 2rem;
+   margin-bottom: 2rem;
 }
-
 .about span {
   color: var(--main-color);
   text-transform: uppercase;
   font-weight: bolder;
+ 
   margin: 0 2px;
   display: inline-block;
 }
 
-/* Desktop Watermark Text */
+
+
+
+
+
 .about-name {
   position: absolute;
   top: 26rem;
   left: 50%;
   transform: translateX(-50%); 
+  
+  /* JADOO: Text ko peeche bhejne aur halka karne ke liye */
   z-index: 0; 
   opacity: 0.20; 
+  
   margin-top: 2rem;
   color: var(--main-color);
   font-size: clamp(6rem, 10vw, 10rem); 
@@ -447,9 +481,8 @@ nav i {
   word-spacing: 5px;
   font-style: italic;
   text-align: center;
-  white-space: normal; /* FIX: Changed from nowrap */
-  width: 100%;
-  word-wrap: break-word;
+  white-space: nowrap; 
+  
 }
 
 .about-role {
@@ -458,21 +491,29 @@ nav i {
   left: 50%;
   transform: translateX(-50%);
   line-height: 2;
+  /* JADOO: Text ko peeche bhejne aur halka karne ke liye */
   z-index: 0; 
   opacity: 0.20; 
+  
   color: var(--font-color);
   font-size: 5vw; 
   letter-spacing: 5px; 
   word-spacing: 5px;
   font-style: italic;
   text-align: center;
-  white-space: normal; /* FIX: Changed from nowrap */
-  width: 100%;
-  word-wrap: break-word;
+  white-space: nowrap;
 }
 
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
 /* ========================================= */
 /* SKILLS SECTION                            */
+/* ========================================= */
+
+/* ========================================= */
+/* 🌟 SKILLS SECTION (All Main Color Hover)  */
 /* ========================================= */
 .skillset-section {
   width: 100%;
@@ -498,6 +539,7 @@ nav i {
   margin: 2rem 0;
 }
 
+/* Outer Card */
 .title-card {
   height: 14rem;
   width: 14rem;
@@ -507,26 +549,48 @@ nav i {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
+
+
+/* 👈 FIX 1: Shuru ka chota gola ab hamesha Main Color (Cyan) rahega */
 .title-overlay {
   height: 6.7rem;
   width: 6.7rem;
   border-radius: 50%;
   transition: transform 0.3s ease-out;
 }
+& #html-overlay {
+  background-color: #E34F26;
+}
 
-#html-overlay { background-color: #E34F26; }
-#css-overlay { background-color:#1572B6 ; }
-#javascript-overlay { background-color: #F7DF1E ; }
-#react-overlay { background-color: #61DAFB; }
-#bootstrap-overlay { background-color: #7952B3; }
-#git-overlay { background-color: #F05032; }
-#github-overlay { background-color: #ffffff; }
+#css-overlay {
+  background-color:#1572B6 ;
+}
 
-.light-mode #github-overlay { background-color: #181717; }
+#javascript-overlay {
+  background-color: #F7DF1E ;
+}
 
+#react-overlay {
+  background-color: #61DAFB;
+}
+
+#bootstrap-overlay {
+  background-color: #7952B3;
+}
+
+#git-overlay {
+  background-color: #F05032;
+}
+#github-overlay {
+  background-color: #ffffff;
+}
+
+.light-mode #github-overlay {
+  background-color: #181717;
+}
+/* Circle */
 .title-circle {
   height: 13rem; 
   width: 13rem;  
@@ -540,6 +604,7 @@ nav i {
   margin: auto;
 }
 
+/* Inner Ring */
 .title-circle::after {
   content: "";
   height: 11.5rem; 
@@ -566,6 +631,7 @@ nav i {
   width: 100%; 
 }
 
+/* FontAwesome Icons */
 .html, .css, .javascript, .react, .bootstrap, .git, .github {
   font-size: 9rem; 
   z-index: 100;
@@ -576,23 +642,32 @@ nav i {
   justify-content: center;
   align-items: center;
 }
+/* ========================================= */
+/* 🎨 ORIGINAL BRAND COLORS FOR ICONS 🎨     */
+/* ========================================= */
 
-.html { color: #E34F26 !important; }
-.css { color: #1572B6 !important; }
-.javascript { color: #F7DF1E !important; }
-.react { color: #61DAFB !important; }
-.bootstrap { color: #7952B3 !important; }
-.git { color: #F05032 !important; }
+.html { color: #E34F26 !important; }       /* HTML - Orange */
+.css { color: #1572B6 !important; }        /* CSS - Blue */
+.javascript { color: #F7DF1E !important; } /* JS - Yellow */
+.react { color: #61DAFB !important; }      /* React - Light Blue/Cyan */
+.bootstrap { color: #7952B3 !important; }  /* Bootstrap - Purple */
+.git { color: #F05032 !important; }        /* Git - Orange/Red */
+
+/* GitHub dark theme par White sab se VIP lagta hai */
+
+
 .github { color:#FFFFFF !important; }
-
 .light-mode .github { color:#181717 !important; }
 
+/* Skill Hover Effects */
 .title-card:hover {
   transform: translateY(-10px) scale(1.005) translateZ(0);
 }
 .title-card:hover .title-overlay {
   transform: scale(2) translateZ(0);
 }
+
+
 
 .title-card:hover .html,
 .title-card:hover .css,
@@ -606,38 +681,90 @@ nav i {
   position: absolute;
 }
 
+
+/* 👈 FIX 2: Text dark ho jayega taake Cyan background par saaf dikhe */
+/* 👈 FIX: Hover par text ko bright aur properly center kiya hai */
 .title-card:hover .title-circle p {
   opacity: 1;
   visibility: visible;
   transform: scale(1) translateZ(0) rotateY(0deg);
-  position: absolute; 
+  position: absolute; /* Static ki jagah absolute rakhein taake hilay nahi */
   z-index: 10000;
-  color: var(--font-color); 
+  
+  /* 👇 YEH HAI JADOO: Text ka color White ya Main Color kar diya 👇 */
+  color: var(--font-color); /* Aap chahay tou var(--main-color) bhi likh sakte hain */
+
 }
 
+
+/* 👈 FIX 3: Hover hone par background completely Main Color (Cyan) ho jayega! */
 .title-card:hover .title-circle {
   border: 3px solid var(--body);
 }
 
-.title-card:hover #html-circle { background-color: #F16529; }
-.title-card:hover #css-circle { background-color: #33A9DC; }
-.title-card:hover #javascript-circle { background-color: #F0DB4F; }
-.title-card:hover #react-circle { background-color: #61DAFB; }
-.title-card:hover #bootstrap-circle { background-color: #A07CE6; }
-.title-card:hover #git-circle { background-color: #F16529; }
-.title-card:hover #github-circle { background-color: #ffffff; }
+ .title-card:hover #html-circle {
+    background-color: #F16529;
+  }
 
-.light-mode .title-card:hover #github-circle { background-color: #171515; }
+ .title-card:hover  #css-circle {
+    background-color: #33A9DC;
+  }
 
-.html, .css { font-size: 8rem; }
-.javascript { font-size: 7.5rem; }
-.react { font-size: 8.5rem; }
-.bootstrap { font-size: 9rem !important; }
-.git { font-size: 9.5rem !important; }
-.github { font-size: 8.5rem; }
+ .title-card:hover  #javascript-circle {
+    background-color: #F0DB4F;
+  }
+
+ .title-card:hover  #react-circle {
+    background-color: #61DAFB;
+  }
+
+ .title-card:hover  #bootstrap-circle {
+    background-color: #A07CE6;
+  }
+
+ .title-card:hover  #git-circle {
+    background-color: #F16529;
+  }
+.title-card:hover #github-circle {
+    background-color: #ffffff;
+  }
+  .light-mode .title-card:hover #github-circle {
+   background-color: #171515;
+}
+ 
 
 /* ========================================= */
-/* PROJECTS SECTION                          */
+/* ⚖️ ICON SIZE BALANCING (Visual Weight) ⚖️ */
+/* ========================================= */
+
+.html, .css { 
+  font-size: 8rem; /* Inko thora sa bara kiya */
+}
+
+.javascript { 
+  font-size: 7.5rem; /* JS naturally square aur bhara hua hota hai, yeh theek hai */
+}
+
+.react { 
+  font-size: 8.5rem; /* React ka icon thora khula hota hai, isay bada kiya */
+}
+
+.bootstrap { 
+  font-size: 9rem !important; /* 👈 Bootstrap sab se chota lag raha tha, isay lamba kiya! */
+}
+
+.git { 
+  font-size: 9.5rem !important; /* 👈 Git diamond shape ka hai, isay sab se zyada boost kiya! */
+}
+
+.github { 
+  font-size: 8.5rem; /* GitHub ko thora sa bada kiya taake proper gol lage */
+}
+/* (Maine neechay se wo saari .title-card:hover #html-circle wali lines delete kar di hain kyunke ab sab ka rang ek hi hai!) */
+
+
+/* ========================================= */
+/* 🚀 PROJECTS SECTION                       */
 /* ========================================= */
 .projects-section {
   padding: 7rem 2%; 
@@ -652,8 +779,9 @@ nav i {
   text-transform: uppercase;
 }
 
+/* ========= GRID ========= */
 .projects-grid {
-  display: flex; 
+ display: flex; /* 👈 Grid ki jagah Flex laga diya */
   gap: 3rem; 
   width: 100%;
   max-width: 1650px; 
@@ -663,9 +791,12 @@ nav i {
   padding-top: 15rem;
 }
 
+/* ========= PROJECT CARD ========= */
 .project-card {
+/* 👇 FIX 1: Proper Flex Ratio 👇 */
   flex: 1 1 0%; 
-  min-width: 0; 
+  min-width: 0; /* 👈 THE SECRET: Yeh line andar ke content ko jam hone se rokti hai! */
+  
   width: 100%;
   height: 400px; 
   border-radius: 18px;
@@ -677,11 +808,16 @@ nav i {
   -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--b-shadow-main-color);
   transform-style: preserve-3d;
+  
+ 
   will-change: flex, transform;
+  
+ 
   transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, box-shadow 0.4s ease;  
   transform: translateY(-12px); 
-}
+  
 
+}
 .projects-grid:not(:hover) .project-card:nth-child(2) {
   flex: 1.5 1 0%;
 }
@@ -691,6 +827,7 @@ nav i {
   box-shadow: 0 45px 90px rgba(0, 180, 255, 0.35);
 }
 
+/* ========= BROWSER BAR ========= */
 .project-browser {
   height: 36px; 
   width: 100%; 
@@ -727,6 +864,7 @@ nav i {
   margin-right: 56px; 
 }
 
+/* ========= SCROLLING IMAGE ========= */
 .project-card img {
   width: 100%; 
   display: block; 
@@ -740,6 +878,7 @@ nav i {
   filter: brightness(1) contrast(1); 
 }
 
+/* ========= OVERLAY ========= */
 .project-overlay {
   position: absolute;
   inset: 0;
@@ -759,6 +898,7 @@ nav i {
   opacity: 1; 
 }
 
+/* ----- OVERLAY TEXT ----- */
 .project-overlay h3,
 .project-overlay p {
   color: #ffffff; 
@@ -768,8 +908,19 @@ nav i {
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-.project-overlay h3 { font-size: 2.2rem; font-weight: 700; }
-.project-overlay p { font-size: 1.1rem; color: #cccccc; letter-spacing: 1px; text-transform: uppercase; font-weight: 600; margin-bottom: 28px; }
+.project-overlay h3 { 
+  font-size: 2.2rem; 
+  font-weight: 700; 
+}
+
+.project-overlay p { 
+  font-size: 1.1rem; 
+  color: #cccccc; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  font-weight: 600; 
+  margin-bottom: 28px; 
+}
 
 .project-card:hover .project-overlay h3,
 .project-card:hover .project-overlay p {
@@ -778,6 +929,7 @@ nav i {
   transition-delay: 0.1s;
 }
 
+/* ----- TAGS ----- */
 .project-tags {
   display: flex; 
   gap: 10px; 
@@ -805,7 +957,10 @@ nav i {
   transition: all 0.3s ease;
 }
 
-.project-tags span i { font-size: 1.8rem; filter: drop-shadow(0 0 5px currentColor); }
+.project-tags span i {
+  font-size: 1.8rem; 
+  filter: drop-shadow(0 0 5px currentColor); 
+}
 
 .project-tags span:hover {
   background: rgba(0, 132, 255, 0.25); 
@@ -820,6 +975,7 @@ nav i {
   transition-delay: 0.2s; 
 }
 
+/* ----- BUTTONS ----- */
 .project-actions { 
   display: flex; 
   gap: 16px; 
@@ -843,39 +999,81 @@ nav i {
   transition: all 0.3s ease;
 }
 
-.project-actions a i { font-size: 2.2rem; }
+.project-actions a i { 
+  font-size: 2.2rem; 
+}
 
-.project-actions a:first-child { background: var(--main-color); color: #ffffff; }
-.project-actions a:first-child:hover { transform: translateY(-4px); background: #ffffff; color: var(--dark-color); }
+/* Primary Button (Live Demo) */
+.project-actions a:first-child {
+  background: var(--main-color); 
+  color: #ffffff;      
+}
 
-.project-actions a:last-child { background: transparent; border: 1px solid #00bfff; color: #00bfff; box-shadow: none; }
-.project-actions a:last-child:hover { transform: translateY(-4px); background: #ffffff; color: var(--dark-color); }
+.project-actions a:first-child:hover {
+  transform: translateY(-4px); 
+  background: #ffffff; 
+  color: var(--dark-color);
+}
 
-.project-card:hover .project-actions { transform: translateY(0); opacity: 1; transition-delay: 0.3s; }
+/* Secondary Button (View Code) */
+.project-actions a:last-child {
+  background: transparent; 
+  border: 1px solid #00bfff; 
+  color: #00bfff; 
+  box-shadow: none;
+}
+
+.project-actions a:last-child:hover {
+  transform: translateY(-4px); 
+  background: #ffffff;
+  color: var(--dark-color);
+}
+
+.project-card:hover .project-actions { 
+  transform: translateY(0); 
+  opacity: 1; 
+  transition-delay: 0.3s; 
+
+}
+
+
 
 /* ========================================= */
 /* CONTACT SECTION                           */
 /* ========================================= */
+/* ========================================= */
+/* 🌟 MINIMALIST CONTACT SECTION 🌟          */
+/* ========================================= */
 .contact-section {
   padding: 6rem 8%;
   position: relative;
+  
 }
 
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px; 
+  gap: 25px; /* Cards ke darmiyan faasla */
   margin-top: 5rem;
-  justify-content: center; 
-  max-width: 1000px; 
-  margin-inline: auto; 
+  justify-content: center; /* Sab kuch bilkul center mein */
+  max-width: 1000px; /* Container ko limit kiya taake failay nahi */
+  margin-inline: auto; /* Container khud bhi center mein rahe */
+  
 }
 
+/* Base Card Style */
 .contact-card {
+  /* background: rgba(0, 0, 0, 0.5);*/
   border: 1px solid rgba(255, 255, 255, 0.1); 
+
+
   background-color:var(--body 0.7); 
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); 
+  -webkit-backdrop-filter: blur(8px); /* Safari/iPhones ke liye */
+
+
+
+
   border-radius: 15px;
   padding: 25px 20px;
   display: flex;
@@ -887,15 +1085,22 @@ nav i {
   color: var(--font-color);
   transition: all 0.4s ease;
   text-align: center;
-  width: 180px; 
+  width: 180px; /* Sab cards ko ek jaisa mukammal square/rectangle banaya */
   box-shadow: var(--b-shadow-black-color);
+
 }
 
 .contact-card i {
-  font-size: 2.8rem; 
-  color: var(--main-color);
+  font-size: 2.8rem; /* Icons thore aur bade kiye */
+  color: var(--main-colo);
   transition: all 0.4s ease;
+
 }
+
+
+  
+  /* Sahi Background (var ki jagah rgba use karein taake glass effect chale) */
+
 
 .contact-card span {
   font-size: 1rem;
@@ -903,10 +1108,14 @@ nav i {
   letter-spacing: 1px;
 }
 
+/* Hover Effects */
 .contact-card:hover {
   transform: translateY(-8px);
+  /* background: rgba(0, 191, 255, 0.1); */
   border-color: var(--main-color);
   box-shadow: 0 10px 25px rgba(0, 191, 255, 0.3);
+
+ 
 }
 
 .social-linkedin:hover i { color: #0a66c2; filter: drop-shadow(0 0 8px #0a66c2); }
@@ -923,6 +1132,7 @@ nav i {
 }
 .location-card:hover i { color: #ff3333; filter: drop-shadow(0 0 8px #ff3333); }
 
+/* ISE CHANGE KAREIN: */
 .light-mode .location-card:hover {
   transform: translateY(-5px);
   background: rgba(0, 0, 0, 0.03) !important; 
@@ -931,19 +1141,742 @@ nav i {
 }
  
 /* ========================================= */
-/* FOOTER SECTION                            */
+/* ✨ CLEAN & PREMIUM FOOTER (FINAL) ✨      */
 /* ========================================= */
+
+/* --- 1. VIP Brand Logo Text --- */
 .footer-logo {
-  color: #ffffff; 
-  font-weight: 800; 
-  font-size: 1.3em; 
+  color: #ffffff; /* Navbar jaisa White color */
+  font-weight: 800; /* Extra bold taake solid lage */
+  font-size: 1.3em; /* Text se thora sa bada */
   letter-spacing: 1px;
-  margin: 0 5px; 
+  margin: 0 5px; /* Thora sa faasla agay peeche */
 }
 
+/* Jadoo wala Cyan Dot */
 .footer-logo .logo-dot {
-  color: var(--main-color); 
+  color: var(--main-color); /* Aapka VIP Cyan color */
   font-size: 1.3em; 
 }
 
-body.light .footer-logo,
+/* Light Mode Support for Logo */
+body.light .footer-logo, .light-mode .footer-logo {
+  color: #222222; /* Light mode mein dark gray text */
+}
+
+/* --- 2. Simple Beating Heart --- */
+.beating-heart {
+  color: #ff3366 !important;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.3); }
+  60% { transform: scale(1); }
+}
+
+/* --- 3. Clean Bouncing Mug (No weird steam) --- */
+.steaming-mug {
+  color: #00bfff !important;
+  display: inline-block;
+  animation: bounceMug 2s infinite ease-in-out;
+}
+
+@keyframes bounceMug {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(8deg); }
+}
+
+/* --- 4. Elegant Pulse on Scroll Button --- */
+.pulsing-btn {
+  box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
+  animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(16, 149, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0); }
+}
+
+.pulsing-btn:hover {
+  animation: none; /* Hover pe pulse khatam taake sukoon mile */
+}/* ========================================= */
+/* 🌞 LIGHT MODE FOOTER FIX 🌞               */
+/* ========================================= */
+
+.light-mode .footer-section {
+  background-color: rgba(0, 0, 0, 0.02); /* Bohut hi narm, premium light gray */
+  border-top: 1px solid rgba(0, 0, 0, 0.08); /* Halki si dark line */
+}
+
+/* Light mode mein text dark hona chahiye taake saaf parha jaye! */
+.light-mode .footer-para {
+  color: #333333; /* Dark gray/black text */
+}
+
+.light-mode .footer-built {
+  color: #666666; /* Thora sa halka dark text */
+}
+/* ========================================= */
+/* UTILITY & MISC CLASSES                    */
+/* ========================================= */
+
+#toggle_button {
+  display: none;
+}
+
+
+
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.myheading {
+  font-size: 1.7rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  line-height: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.myheading span {
+  font-weight: 900;
+}
+
+.glass-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.glass-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transition: 0.4s ease;
+}
+
+/* ========================================= */
+/* MEDIA QUERIES (MOBILE RESPONSIVENESS)     */
+/* ========================================= */
+@media (max-width: 800px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.5rem;
+    top: 8.1rem;
+    margin-right: 0;
+  }
+  
+  nav ul {
+    display: none;
+    box-shadow: var(--b-shadow-main-color);
+    border-radius: 10px;
+    background-color: var(--body);
+    padding: 0.3rem;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 2rem 8rem;
+    transition: 1s;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    background-color: var(--font-color);
+    border-radius: 10px;
+  }
+  
+  nav li a::after {
+    display: none;
+  }
+
+  #toggle_button {
+    display: block;
+  }
+  
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+/* ========================================================================= */
+/* 📱 ALL DEVICES RESPONSIVENESS (Tablets, Mobiles, Small Screens)           */
+/* ========================================================================= */
+
+/* ----------------------------------------- */
+/* 1. TABLETS & SMALL LAPTOPS (Max 991px)    */
+/* ----------------------------------------- */
+@media (max-width: 991px) {
+  html {
+    font-size: 45%; /* Poori website thodi scale down ho jayegi */
+  }
+  
+  .container-main {
+    padding: 5rem;
+  }
+
+  .projects {
+    padding-top: 5rem;
+  }
+
+  .project-item {
+    width: 40%; /* 2 projects in a row */
+  }
+
+  .skill {
+    width: 33.33%; /* 3 skills in a row */
+  }
+}
+
+/* ----------------------------------------- */
+/* 2. MOBILE PHONES (Max 768px)              */
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+/* 2. MOBILE PHONES (Max 768px)              */
+/* ----------------------------------------- */
+@media (max-width: 768px) {
+  html {
+    font-size: 40%; 
+  }
+
+  /* --- Navbar Adjustments --- */
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1.5rem;
+    top: 8.1rem;
+    margin-right: 0;
+  
+  }
+  
+  nav ul {
+    display: none;
+  
+    border-radius: 10px;
+    
+  background-color: color-mix(in srgb, var(--body) 70%, transparent);
+  backdrop-filter: blur(20px);
+    padding: 0.3rem;
+  }
+  
+  nav li a {
+    display: block;
+    padding: 2rem 8rem;
+    transition: 1s;
+    text-align: center;
+  }
+  
+  nav a:hover {
+    background-color: var(--font-color);
+    border-radius: 10px;
+  }
+  
+  nav li a::after {
+    display: none;
+  }
+
+  #toggle_button {
+    display: block;
+  }
+
+  /* 👇 YAHAN SE NAYA FIX START HO RAHA HAI 👇 */
+  
+  /* --- Hero Section (Text upar, Image neeche) --- */
+  .container-main {
+    flex-direction: column-reverse; 
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    min-height: 100vh; /* Naya add kiya */
+    padding: 12rem 2rem 20rem 2rem; /* Bottom padding ko 20rem kiya taake wave ke liye jagah banay */
+    position: relative; 
+  }
+
+  .content-section {
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .main-section-image {
+    width: 80%; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img {
+
+    position: relative;
+  z-index: 2;
+  
+  /* 🔥 JADOO YAHAN HAI 🔥 */
+  width: 65%; /* 90% se 65% kar diya taake tasveer patli rahay aur zoom na ho */
+  height: 90%;
+  
+  object-fit: cover;
+  object-position: top; /* Face ko center mein rakhne ke liye */
+  
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  border: 4px solid var(--font-color);
+  transition: transform 0.3s ease;
+  
+
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+  
+  .subheading {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  /* --- About Section Fix --- */
+  .about-section {
+    margin-top: 5rem; /* About ko thoda niche dhakela */
+  }
+
+  .about-glass-container {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 2rem; 
+  }
+
+  /* 👆 YAHAN TAK NAYA FIX THA 👆 */
+
+  /* --- Skills Section --- */
+  .skill {
+    width: 50%; 
+  }
+
+  /* --- Projects Section --- */
+  .projects {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-item {
+    width: 80%; 
+    height: 35vh;
+  }
+
+  /* --- Contact Section --- */
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .contact-me {
+    align-items: center;
+  }
+  
+  .contact-divider {
+    transform: rotate(0deg); 
+    width: 80%;
+    margin: 2rem 0;
+  }
+}
+
+/* ========================================= */
+/* 🚀 PREMIUM FOOTER SECTION                 */
+/* ========================================= */
+.footer-section {
+  padding: 4rem 2% 2rem 2%; /* Top padding thori barhai button ke liye */
+  background-color: rgba(0, 0, 0, 0.25); /* Halka sa dark base */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  margin-top: 6rem;
+  text-align: center; /* Sab kuch center mein */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Text ko ek ke neeche ek kiya */
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Dono lines ke beech thora faasla */
+  width: 100%;
+}
+
+.footer-para {
+  font-size: 1.5rem;
+  color: #cccccc;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: none; 
+  font-style: normal; /* Ajeeb italic ko seedha kiya */
+}
+
+/* Naam ko chamkane ke liye */
+.footer-para .highlight-name {
+  color: var(--main-color);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* Crafted with Love styling */
+.footer-built {
+  font-size: 1.3rem;
+  color: #888888;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: none;
+}
+
+.footer-built i {
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.footer-built i:hover {
+  transform: scale(1.3) translateY(-2px); /* Hover pe dil aur cup uchlenge */
+}
+
+/* ----- CENTERED SCROLL TO TOP BUTTON (MAGIC ✨) ----- */
+.scroll-top {
+  position: absolute;
+  left: 50%; /* Screen ke bilkul center mein */
+  transform: translateX(-50%); 
+  top: -25px; /* Line ke bilkul aadhay upar, aadhay neechay */
+  background: var(--main-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #000000;
+  font-size: 1.8rem;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.4);
+  transition: all 0.3s ease;
+  border: 4px solid var(--body); /* Cut-out effect ke liye border */
+  z-index: 10;
+}
+
+.scroll-top:hover {
+  transform: translateX(-50%) translateY(-5px); /* Center mein reh kar upar uthay ga */
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 191, 255, 0.6);
+  color: var(--main-color);
+}
+
+/* ----- MOBILE RESPONSIVE (FOOTER) ----- */
+@media (max-width: 768px) {
+  .footer-section { padding-top: 5rem; }
+}
+/* ========================================= */
+/* 🚀 ADVANCED PRO FOOTER ANIMATIONS 🚀      */
+/* ========================================= */
+
+/* ========================================= */
+/* 🚀 ADVANCED PRO FOOTER ANIMATIONS 🚀 */
+/* ========================================= */
+
+/* 1. Shimmer Text Effect (Naam Ke Liye) */
+.shimmer-text {
+  background: linear-gradient(to right, #ffffff 20%, var(--main-color) 50%, #ffffff 80%);
+  background-size: 200% auto;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* Light Mode ke liye shimmer color change */
+body.light .shimmer-text {
+  background: linear-gradient(to right, #333333 20%, var(--main-color) 50%, #333333 80%);
+  -webkit-background-clip: text;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* 2. Beating Heart Animation */
+.beating-heart {
+  color: #ff3366 !important;
+  display: inline-block;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.3); }
+  60% { transform: scale(1); }
+}
+
+/* 3. Steaming Coffee Mug Animation */
+.steaming-mug {
+  color: #00bfff !important;
+  display: inline-block;
+  animation: bounceMug 2s infinite ease-in-out;
+}
+
+@keyframes bounceMug {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(8deg); }
+}
+
+/* 4. Pulse Effect for Scroll Button */
+.pulsing-btn {
+  box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
+  animation: pulseRing 2s infinite;
+}
+
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(16, 149, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0); }
+}
+
+.pulsing-btn:hover {
+  animation: none; /* Hover par pulsereffect stop ho jaye */
+}
+
+::-webkit-scrollbar {
+  display: none; /* Scrollbar ki shakal bilkul gayab! */
+}
+
+/* 2. Firefox aur purane browsers ke liye (Universal) */
+* {
+  -ms-overflow-style: none;  /* IE aur Edge ke liye */
+  scrollbar-width: none;     /* Firefox ke liye */
+}
+
+/* ========================================= */
+/* 📱 FULL MOBILE RESPONSIVE FIX             */
+/* ========================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  html {
+    font-size: 45%;
+  }
+
+  .container-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding: 12rem 3rem 8rem;
+    gap: 4rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .content-section,
+  .main-section-image {
+    width: 100%;
+  }
+
+  .hero-img-container {
+    width: 280px;
+    height: 280px;
+  }
+
+  .projects-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+
+  .skill {
+    width: 33.33%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+
+  /* Navbar */
+  .container-nav {
+    height: auto;
+    padding: 1.5rem 2rem;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  /* Hero Section */
+  .container-main {
+    flex-direction: column-reverse;
+    padding: 12rem 2rem 6rem;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .content-section {
+    width: 100%;
+  }
+
+  .heading {
+    font-size: 4.5rem;
+  }
+
+  .subheading {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .hero-img-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-img {
+    width: 75%;
+    height: 85%;
+  }
+
+  /* About */
+  .about-glass-container {
+    width: 95%;
+    padding: 6rem 2rem;
+  }
+
+  .about-name,
+  .about-role {
+    display: none;
+  }
+
+  .about p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  /* Skills */
+  .container-skillset {
+    padding: 2rem;
+  }
+
+  .skill {
+    width: 50%;
+  }
+
+  /* Projects */
+  .projects-grid {
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 6rem;
+  }
+
+  .project-card {
+    width: 100%;
+    min-width: 100%;
+    height: 320px;
+  }
+
+  .project-card:hover {
+    flex: 1 1 100%;
+  }
+
+  /* Contact */
+  .contact-container {
+    gap: 1.5rem;
+  }
+
+  .contact-card {
+    width: 45%;
+  }
+
+  /* Footer */
+  .footer-para,
+  .footer-built {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 35%;
+  }
+
+  .container-main {
+    padding: 10rem 1.5rem 5rem;
+  }
+
+  .heading {
+    font-size: 3.8rem;
+  }
+
+  .subheading {
+    font-size: 2.3rem;
+  }
+
+  .hero-img-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 100%;
+  }
+
+  .project-card {
+    height: 280px;
+  }
+
+  .main-contact-btn {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.3rem;
+  }
+}
