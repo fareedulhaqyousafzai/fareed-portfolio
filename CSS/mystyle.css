@@ -1746,4 +1746,64 @@ body {
     font-size: 6vw; /* Role ka text name se chota rahega */
     white-space: normal;
     width: 90%;
-  }}
+  }
+
+@media (max-width: 768px) {
+  /* 👇 1. Hero Section ki Spacing Fix 👇 */
+  .container-main {
+    flex-direction: column-reverse; /* Image upar, text neechay */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 10rem; /* Navbar ke liye upar space */
+    padding-bottom: 10rem; /* Wave ke liye neechay space */
+    gap: 3rem; /* Image aur Text ke darmiyan perfect gap */
+  }
+
+  /* 👇 2. Blob aur Image ka Size Chota Kiya 👇 */
+  .hero-img-container {
+    width: 230px !important; /* Mobile par blob chota kar diya */
+    height: 230px !important;
+    margin: 0 auto;
+  }
+
+  .hero-img {
+    width: 65%;
+    height: 90%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* 👇 3. Text aur Button ki Alignment 👇 */
+  .content-section {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Text aur button bilkul center */
+  }
+
+  .subheading {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .heading {
+    font-size: 6rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .main-contact-btn {
+    margin-top: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+  }
+
+  /* 👇 4. Bottom Wave ki Height Adjust Ki 👇 */
+  .custom-shape-divider-bottom-1716734170 svg {
+    height: 70px; /* Wave mobile par choti aur behtar lagegi */
+  }
+}
+}
