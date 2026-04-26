@@ -1684,3 +1684,66 @@ body.light .shimmer-text {
   -ms-overflow-style: none;  /* IE aur Edge ke liye */
   scrollbar-width: none;     /* Firefox ke liye */
 }
+
+
+@media (max-width: 768px) {
+  /* 👇 1. SIDE SCROLL KO ROKNE KE LIYE 👇 */
+body {
+    overflow-x: hidden; /* Horizontal scroll ko completely disable kar diya */
+
+  }
+
+  /* ... aapka baqi mobile navbar aur hero section ka code wese hi rahega ... */
+
+  /* 👇 2. PROJECTS KO UPAR-NICHE (COLUMN) KARNE KE LIYE 👇 */
+  .projects-grid {
+    flex-direction: column; /* Projects ko side-by-side se top-to-bottom karega */
+    padding-top: 5rem; /* Upar se extra space kam kar di */
+    gap: 3rem;
+    align-items: center; /* Center mein align karega */
+    width: 100%;
+  }
+
+  /* 👇 3. PROJECT KI HEIGHT KAM KARNE KE LIYE 👇 */
+  .project-card {
+    width: 90%; /* Mobile par full chaurai (width) dega thore gap ke sath */
+    height: 250px; /* 👈 Height yahan 400px se kam karke 250px kar di hai */
+    flex: none !important; /* Grid ke flex behavior ko force overide kiya */
+  }
+
+  /* Mobile par hover effect ko smooth karne ke liye */
+  .projects-grid:not(:hover) .project-card:nth-child(2),
+  .project-card:hover {
+    flex: none !important;
+    transform: translateY(-5px); 
+  }
+
+  /* Card ke andar image ki height adjust karne ke liye */
+  .project-card img {
+    margin-top: 36px;
+    height: calc(100% - 36px);
+    object-fit: cover; /* Image ko box ke andar perfectly fit karega stretch kiye bina */
+  }
+
+
+/* 👇 ABOUT BACKGROUND TEXT KA MASLA 👇 */
+  .about-glass-container {
+    overflow: hidden; /* Text ko glass block se bahar nikalne se rokega */
+  }
+
+  .about-name {
+    top: 50%; /* Glass box ke bilkul center mein lane ke liye */
+    transform: translate(-50%, -50%); /* Perfect center alignment */
+    font-size: 7vw; /* Text ko mobile screen ki chaurai ke mutabiq set karega */
+    white-space: normal; /* Text ko wrap hone dega (ek line mein zabardasti nahi rakhega) */
+    line-height: 1.1;
+    width: 90%;
+  }
+
+  .about-role {
+    top: 60%; /* Name ke thora neechay adjust karne ke liye */
+    transform: translate(-50%, -50%);
+    font-size: 6vw; /* Role ka text name se chota rahega */
+    white-space: normal;
+    width: 90%;
+  }}
