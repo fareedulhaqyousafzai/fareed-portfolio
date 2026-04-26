@@ -1832,3 +1832,32 @@ html, body {
     box-sizing: border-box; /* Padding ko width ke andar count karega */
   }
 }
+
+/* ========================================= */
+/* 🚀 FINAL MOBILE SIDE SCROLL FIX 🚀        */
+/* ========================================= */
+
+/* 1. Body ko completely lock kar dega */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative;
+  max-width: 100vw !important;
+}
+
+/* 2. In sections ke andar ki koi bhi cheez screen se bahar nahi jayegi */
+.about-section,
+.container-main,
+.custom-shape-divider-bottom-1716734170 {
+  overflow-x: hidden !important; 
+  width: 100%;
+}
+
+/* 3. Watermark text ko zabardasti screen ke andar wrap karega */
+.about-name,
+.about-role {
+  white-space: normal !important;
+  width: 90% !important;
+  word-wrap: break-word !important;
+  text-align: center;
+}
