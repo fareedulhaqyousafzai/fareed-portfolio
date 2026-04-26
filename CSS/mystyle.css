@@ -1805,5 +1805,44 @@ body {
   .custom-shape-divider-bottom-1716734170 svg {
     height: 70px; /* Wave mobile par choti aur behtar lagegi */
   }
+
+  @media (max-width: 768px) {
+  /* 👇 1. Main Navbar Container Fix 👇 */
+  .container-nav {
+    width: 92%; /* 96% se thora kam kiya taake safe rahe */
+    margin-left: 4%; /* Screen ke center mein rakhega */
+    padding: 1rem 1.5rem;
+    justify-content: space-between; /* Logo, Toggle aur Icon ko proper space dega */
+  }
+
+  /* 👇 2. Logo aur Moon/Sun Toggle ko chota kiya 👇 */
+  .portfolio-logo {
+    font-size: 2.8rem; /* Mobile par logo thora chota kiya */
+  }
+
+  .theme_toggle {
+    transform: scale(0.7); /* Toggle button ko 30% chota kiya taake jagah bache */
+    margin: 0;
+  }
+
+  /* 👇 3. Dropdown (Hamburger Menu) ko screen ke andar kiya 👇 */
+  nav {
+    position: absolute;
+    top: 7rem;
+    right: 0; /* Screen se bahar jane se rokega */
+    width: auto;
+  }
+
+  nav ul {
+    width: 220px; /* Menu ki chaurai fix kar di taake failay na */
+    padding: 1rem 0;
+    margin-right: 1.5rem; /* Screen ke edge se thora andar rakhega */
+  }
+
+  nav li a {
+    padding: 1.5rem 2rem; /* 👈 8rem wali extra padding khatam kar di */
+    font-size: 1.5rem;
+  }
+}
 }
 }
