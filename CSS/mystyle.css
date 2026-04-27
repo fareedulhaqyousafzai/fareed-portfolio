@@ -1387,7 +1387,7 @@ body.light .footer-logo, .light-mode .footer-logo {
   /* 👈 FIX 2: Mobile par flex-grow band kiya taake saare cards ek size ke rahain */
   .project-card {
     flex: none !important; /* Mobile pe flex failne (grow) se roka */
-    width: 90% !important; /* Mobile ki screen ke hisaab se width */
+    width: 50% !important; /* Mobile ki screen ke hisaab se width */
     height: 250px; 
     margin: 0 auto;
   }
