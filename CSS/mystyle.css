@@ -1381,7 +1381,7 @@ body.light .footer-logo, .light-mode .footer-logo {
     flex-direction: column; 
     align-items: center;
     padding-top: 5rem; /* Upar ka extra space kam kiya */
-    gap: 30px;
+  
   }
 
   /* 👈 FIX 2: Mobile par flex-grow band kiya taake saare cards ek size ke rahain */
@@ -1398,6 +1398,40 @@ body.light .footer-logo, .light-mode .footer-logo {
   }
 }
 
+.theme_toggle {
+width: 7rem;
+  height: 3.5rem;
+
+}
+
+.theme_toggle {
+
+  width: 4em;
+  height: 2em;
+ 
+}
+
+.theme_toggle:before {
+ 
+  width: 2em;
+  height: 2em;
+
+}
+
+.theme_toggle:checked {
+  background-color: var(--body);
+}
+
+.theme_toggle:checked:before,
+.theme_toggle:checked ~ .theme__icon {
+  transform: translateX(1.8em);
+}
+
+.theme_toggle:checked:before {
+  width: 2em;
+  height: 2em;
+
+}
   /* --- Navbar Adjustments --- */
   nav {
     display: flex;
@@ -1421,9 +1455,10 @@ body.light .footer-logo, .light-mode .footer-logo {
   
   nav li a {
     display: block;
-    padding: 2rem 8rem;
+    padding: 1rem 2rem;
     transition: 1s;
     text-align: center;
+    font-size: 8px;
   }
   
   nav a:hover {
@@ -1718,4 +1753,76 @@ body.light .shimmer-text {
 * {
   -ms-overflow-style: none;  /* IE aur Edge ke liye */
   scrollbar-width: none;     /* Firefox ke liye */
+}
+/* ========================================= */
+/* RESPONSIVE DESIGN (768px)                 */
+/* ========================================= */
+@media (max-width: 768px) {
+
+  html {
+    font-size: 45%;
+  }
+
+  /* NAVBAR */
+  .container-nav {
+    flex-direction: row;
+    height: auto;
+    padding: 2rem;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* HERO SECTION */
+  /* .container-main {
+    flex-direction: column;
+    padding: 12rem 2rem 4rem 2rem;
+    text-align: center;
+    height: auto;
+  } */
+
+  .hero-img-container {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* CONTENT */
+  .content-section {
+    width: 100%;
+  }
+
+  .subheading {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .main-contact-btn {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.4rem;
+  }
+
+  /* LOGO */
+  .portfolio-logo {
+    font-size: 3rem;
+  }
+
+  /* SHAPE FIX */
+  .custom-shape-divider-bottom-1716734170 svg {
+    height: 100px;
+  }
+
 }
