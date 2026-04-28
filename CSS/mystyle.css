@@ -1945,3 +1945,27 @@ body.light .shimmer-text {
 .img-glow-bg {
     pointer-events: none !important; /* Yeh touch ko aar-paar guzarne dega */
 }
+@media (max-width: 800px) {
+  #toggle_button {
+    display: flex !important; /* Block ki jagah flex lagao taake align ho */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9999999 !important; /* Isko asmaan pe pohncha do */
+    width: 45px !important; /* Tap karne ke liye area bara kiya hai */
+    height: 45px !important;
+    font-size: 3rem !important; /* Icon ka size bara kiya */
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--font-color);
+    touch-action: manipulation !important; /* Mobile touch delay khatam */
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Agar tumne icon (fas fa-bars) kisi span ya i tag mein rakha hai */
+  #toggle_button i, 
+  #toggle_button span {
+    pointer-events: none !important; /* Taps direct button pe lagain, icon pe nahi */
+  }
+}
