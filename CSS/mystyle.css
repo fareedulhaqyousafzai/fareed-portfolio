@@ -1835,3 +1835,14 @@ body.light .shimmer-text {
     cursor: pointer;
   }
 }
+.theme_toggle {
+  /* ... aapka purana code wese hi rahay ga ... */
+  z-index: 10005; /* Taake yeh baqi kisi bhi div/background se upar rahay */
+  touch-action: manipulation; /* Mobile pe click delay ko khatam karta hai */
+  -webkit-tap-highlight-color: transparent; /* Tap karne pe jo ajeeb sa blue box aata hai, usay hatata hai */
+}
+
+.theme_toggle:before {
+  /* ... aapka purana code wese hi rahay ga ... */
+  pointer-events: none !important; /* 🔥 YEH SAB SE ZAROORI HAI 🔥 Is se touch icon ko ignore kar ke direct toggle button ko lagega */
+}
