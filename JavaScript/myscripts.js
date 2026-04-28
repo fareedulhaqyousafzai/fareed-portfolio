@@ -38,10 +38,9 @@ typing();
 
 $(document).ready(function () {
   $("#toggle_button").click(function () {
-    $("nav ul").toggle();
+    $("nav ul").slideToggle(); 
   });
 });
-
 
 // const cards = document.querySelectorAll(".project-card");
 
