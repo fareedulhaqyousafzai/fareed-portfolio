@@ -6,9 +6,8 @@ toggleButton.addEventListener("click", function () {
   // Toggle the dark-mode class on the body
   document.body.classList.toggle("light-mode");
 
-  // Optionally, save the user's preference in localStorage or a cookie
-  // Example using localStorage:
   const isLightMode = document.body.classList.contains("light-mode");
+  
   if (isLightMode) {
     document.documentElement.style.setProperty("--body", "#fff");
     document.documentElement.style.setProperty("--font-color", "#1c354f");
@@ -17,11 +16,11 @@ toggleButton.addEventListener("click", function () {
     document.documentElement.style.setProperty("--font-color", "#fff");
   }
 
-  // Optionally, save the user's preference in localStorage
-  localStorage.setItem("darkMode", isDarkMode);
+  // Save the user's preference in localStorage
+  localStorage.setItem("lightMode", isLightMode);
 });
 
-//text efec
+// Text Effect
 let i = 0;
 const text = "Front-End Developer!";
 const typing = function () {
@@ -29,38 +28,15 @@ const typing = function () {
     document.querySelector(".textEffect").innerHTML += text.charAt(i);
     i++;
     setTimeout(typing, 150);
-  }
-  if (i === text.length) {
+  } else {
     document.querySelector(".last").innerHTML = "";
   }
 };
 typing();
 
+// Mobile Navigation Toggle
 $(document).ready(function () {
   $("#toggle_button").click(function () {
-    $("nav ul").slideToggle(); 
+    $("nav ul").slideToggle(300); // .toggle() ki jagah slideToggle thora smooth rehta hai
   });
 });
-
-// const cards = document.querySelectorAll(".project-card");
-
-// cards.forEach(card => {
-//   card.addEventListener("mousemove", (e) => {
-//     const rect = card.getBoundingClientRect();
-//     const x = e.clientX - rect.left;
-//     const y = e.clientY - rect.top;
-
-//     const centerX = rect.width / 2;
-//     const centerY = rect.height / 2;
-
-//     const rotateX = ((y - centerY) / centerY) * 8;
-//     const rotateY = ((x - centerX) / centerX) * -8;
-
-//     card.style.transform =
-//       `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-18px)`;
-//   });
-
-//   card.addEventListener("mouseleave", () => {
-//     card.style.transform = "rotateX(0) rotateY(0) translateY(0)";
-//   });
-// });
