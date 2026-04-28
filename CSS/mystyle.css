@@ -1924,3 +1924,24 @@ body.light .shimmer-text {
     touch-action: manipulation; /* Mobile screen ko batata hai ke touch foran register kare */
     -webkit-tap-highlight-color: transparent;
   }
+
+  /* 1. Navbar ko duniya ki har cheez se upar laane ke liye (Max Z-Index) */
+.container-nav {
+    position: fixed !important;
+    top: 0 !important; /* Yeh line sab se zaroori hai, isay fix anchor karne ke liye */
+    z-index: 2147483647 !important; /* CSS ki aakhri maximum Z-index limit */
+}
+
+/* 2. Main section ko Navbar ke hamesha neechay rakhne ke liye */
+#main-section, 
+.container-main {
+    position: relative;
+    z-index: 1 !important; 
+}
+
+/* 3. Hero section mein jo glow ya glass blocks touch rok rahe hain, unko bypass karne ke liye */
+.glass-overlay, 
+.glass-wrapper,
+.img-glow-bg {
+    pointer-events: none !important; /* Yeh touch ko aar-paar guzarne dega */
+}
