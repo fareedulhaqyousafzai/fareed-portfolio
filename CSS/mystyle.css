@@ -1825,4 +1825,13 @@ body.light .shimmer-text {
     height: 100px;
   }
 
+
+}
+@media (max-width: 800px) {
+  #toggle_button {
+    display: block;
+    position: relative; 
+    z-index: 10005; /* 👈 Isko navbar se upar laane ke liye high z-index diya */
+    cursor: pointer;
+  }
 }
