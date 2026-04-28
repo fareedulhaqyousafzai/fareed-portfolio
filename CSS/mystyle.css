@@ -1969,3 +1969,8 @@ body.light .shimmer-text {
     pointer-events: none !important; /* Taps direct button pe lagain, icon pe nahi */
   }
 }
+/* Jab JS 'show-menu' class add karega tou ye chalega */
+nav ul.show-menu {
+    display: flex !important;
+    flex-direction: column;
+}
