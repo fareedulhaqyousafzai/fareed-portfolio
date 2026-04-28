@@ -1846,3 +1846,22 @@ body.light .shimmer-text {
   /* ... aapka purana code wese hi rahay ga ... */
   pointer-events: none !important; /* 🔥 YEH SAB SE ZAROORI HAI 🔥 Is se touch icon ko ignore kar ke direct toggle button ko lagega */
 }
+@media (max-width: 768px) {
+  /* ... aapka baki mobile CSS ... */
+
+  .theme_toggle {
+    width: 60px !important;  /* Fixed size taake mobile pe chota na ho */
+    height: 30px !important; 
+    z-index: 10005; 
+  }
+
+  .theme_toggle:before {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .theme_toggle:checked:before,
+  .theme_toggle:checked ~ .theme__icon {
+    transform: translateX(30px) !important; /* Icon ko half aagay push karega */
+  }
+}
