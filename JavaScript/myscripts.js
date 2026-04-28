@@ -42,24 +42,26 @@ $(document).ready(function () {
   });
 });
 
-// Button aur Menu ko select karein
-const toggleButton = document.getElementById('toggle_button');
-const navMenu = document.querySelector('nav ul');
 
-if (toggleButton && navMenu) {
-    toggleButton.addEventListener('click', function(event) {
-        // Yeh line mobile browser ko confuse hone se rokti hai
-        event.preventDefault(); 
-        event.stopPropagation();
-        
-        // Menu par 'show-menu' naam ki class lagayega aur hatayega
-        navMenu.classList.toggle('show-menu'); 
-    });
+// const cards = document.querySelectorAll(".project-card");
 
-    // BONUS: Agar user screen pe kahin aur click kare tou menu khud band ho jaye
-    document.addEventListener('click', function(event) {
-        if (!toggleButton.contains(event.target) && !navMenu.contains(event.target)) {
-            navMenu.classList.remove('show-menu');
-        }
-    });
-}
+// cards.forEach(card => {
+//   card.addEventListener("mousemove", (e) => {
+//     const rect = card.getBoundingClientRect();
+//     const x = e.clientX - rect.left;
+//     const y = e.clientY - rect.top;
+
+//     const centerX = rect.width / 2;
+//     const centerY = rect.height / 2;
+
+//     const rotateX = ((y - centerY) / centerY) * 8;
+//     const rotateY = ((x - centerX) / centerX) * -8;
+
+//     card.style.transform =
+//       `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-18px)`;
+//   });
+
+//   card.addEventListener("mouseleave", () => {
+//     card.style.transform = "rotateX(0) rotateY(0) translateY(0)";
+//   });
+// });
