@@ -42,3 +42,24 @@ $(document).ready(function () {
   });
 });
 
+// Button aur Menu ko select karein
+const toggleButton = document.getElementById('toggle_button');
+const navMenu = document.querySelector('nav ul');
+
+if (toggleButton && navMenu) {
+    toggleButton.addEventListener('click', function(event) {
+        // Yeh line mobile browser ko confuse hone se rokti hai
+        event.preventDefault(); 
+        event.stopPropagation();
+        
+        // Menu par 'show-menu' naam ki class lagayega aur hatayega
+        navMenu.classList.toggle('show-menu'); 
+    });
+
+    // BONUS: Agar user screen pe kahin aur click kare tou menu khud band ho jaye
+    document.addEventListener('click', function(event) {
+        if (!toggleButton.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('show-menu');
+        }
+    });
+}
