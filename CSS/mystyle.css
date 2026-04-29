@@ -1135,12 +1135,12 @@ body.light .footer-logo,
 
   /* Navbar */
   .container-nav {
-    width: 85% !important;         /* Navbar ki width thori smart ki */
+    width: 90% !important;         /* Navbar ki width thori smart ki */
     left: 0 !important;            /* 👈 In 3 lines se box PERFECT center hoga */
     right: 0 !important;
     margin: 0 auto !important;     
     justify-content: space-between !important; /* Andar ki cheezon ko proper faasle par set karega */
-    padding: 0.2rem 4rem !important; /* Andar ki sides pe thori saans lene ki jagah */
+    padding: 0rem 4rem 0rem !important; /* Andar ki sides pe thori saans lene ki jagah */
   }
   nav {
     display: flex;
@@ -1156,12 +1156,12 @@ body.light .footer-logo,
     border-radius: 10px;
     background-color: color-mix(in srgb, var(--body) 70%, transparent);
     backdrop-filter: blur(20px);
-    padding: 0.3rem;
+    padding: 0.1rem;
     box-shadow: var(--b-shadow-black-color);
   }
   nav li a {
     display: block;
-    padding: 1rem 2rem;
+    padding: 1.5rem 3rem;
     text-align: center;
     font-size: 12px;
   }
