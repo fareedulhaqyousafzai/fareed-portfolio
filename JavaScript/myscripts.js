@@ -34,9 +34,14 @@ const typing = function () {
 };
 typing();
 
-// Mobile Navigation Toggle
-$(document).ready(function () {
+
+
+  $(document).ready(function () {
   $("#toggle_button").click(function () {
-    $("nav ul").slideToggle(300); // .toggle() ki jagah slideToggle thora smooth rehta hai
+    // Ye aapka purana code hai jo menu ko kholta/band karta hai
+    $("nav ul").slideToggle(300);
+
+    // 🔥 NAYA JADOO: Ye line 3-lines aur X icon ko aapas mein badlegi 🔥
+    $(this).toggleClass("fa-bars fa-xmark");
   });
 });
