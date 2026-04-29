@@ -1239,7 +1239,7 @@ body.light .footer-logo,
   /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
   .about p {
     font-size: 2rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
-    line-height: 1.8 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
+    line-height: 1.4 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
     margin-top: 20px !important;
     margin-bottom: 15px !important;
   }
