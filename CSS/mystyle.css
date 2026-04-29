@@ -1249,13 +1249,18 @@ body.light .footer-logo,
 
   /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
-    font-size: 5rem !important;
-    top: 30rem !important; /* Thora position set ki */
+top: 42% !important;  /* Container ke bilkul darmiyan se thora oopar */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 3.5rem
   }
   
   .about-role {
-    font-size: 3rem !important;
-    top: 26rem !important;
+   top: 55% !important;  /* Container ke bilkul darmiyan se thora neechay */
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Perfect Center Trick */
+font-size: 1.8rem !important;
+    letter-spacing: 2px !important;
   }
 
 
