@@ -1135,17 +1135,19 @@ body.light .footer-logo,
 
   /* Navbar */
   .container-nav {
-    flex-direction: row;
-    height: auto;
-    padding: 0.5rem;
-    gap: 1rem;
+    width: 85% !important;         /* Navbar ki width thori smart ki */
+    left: 0 !important;            /* 👈 In 3 lines se box PERFECT center hoga */
+    right: 0 !important;
+    margin: 0 auto !important;     
+    justify-content: space-between !important; /* Andar ki cheezon ko proper faasle par set karega */
+    padding: 0.2rem 4rem !important; /* Andar ki sides pe thori saans lene ki jagah */
   }
   nav {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 1.5rem;
-    top: 8.1rem;
+    right: 0.2rem;
+    top: 8.5rem;
     margin-right: 0;
     padding: 0;
   }
@@ -1159,8 +1161,9 @@ body.light .footer-logo,
   }
   nav li a {
     display: block;
-    padding: 1.5rem 3rem;
+    padding: 1rem 1.5rem;
     text-align: center;
+    font-size: 12px;
   }
   nav a:hover {
     background-color: var(--font-color);
