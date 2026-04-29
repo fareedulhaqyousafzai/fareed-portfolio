@@ -1233,25 +1233,25 @@ body.light .footer-logo,
 
   /* 2. 'ABOUT' ki main heading ko thora chota kiya */
   .about-glass-container .main-heading {
-    font-size: 3.2rem !important; 
+    font-size: 4rem !important; 
   }
 
   /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
   .about p {
-    font-size: 1.4rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
-    line-height: 1.6 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
+    font-size: 2rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
+    line-height: 1.8 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
     margin-top: 20px !important;
     margin-bottom: 15px !important;
   }
 
   /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
-    font-size: 4.5rem !important;
+    font-size: 5rem !important;
     top: 30rem !important; /* Thora position set ki */
   }
   
   .about-role {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
     top: 26rem !important;
   }
 
