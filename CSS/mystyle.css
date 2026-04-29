@@ -1268,7 +1268,7 @@ opacity: 1rem;
   /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
     top: 50rem !important;      /* Mobile ke hisaab se height oopar ki */
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
     z-index: 2 !important;
     
