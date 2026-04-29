@@ -383,6 +383,7 @@ body.light .footer-logo,
   display: flex;
   justify-content: center;
   position: relative;
+  z-index: 1 !important;
 }
 .about-glass-container {
   padding: 10rem 5rem;
@@ -395,7 +396,7 @@ body.light .footer-logo,
   max-width: 1700px;
   height: auto;
   position: relative;
-  z-index: 1;
+  z-index: 10
 }
 .about p {
   margin-top: 40px;
@@ -416,11 +417,9 @@ body.light .footer-logo,
 }
 .about-name {
   position: absolute;
-  top: 26rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-  opacity: 0.2;
+  top: 30rem;
+opacity: 1rem;
+  z-index: 2;
   margin-top: 2rem;
   color: var(--main-color);
   font-size: clamp(6rem, 10vw, 10rem);
@@ -428,22 +427,36 @@ body.light .footer-logo,
   font-style: italic;
   text-align: center;
   white-space: nowrap;
+  white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
+  width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
+  padding: 0 1rem;                /* Kinaaron se thora fasla */
+  box-sizing: border-box;
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  pointer-events: none !important;
 }
 .about-role {
   position: absolute;
-  top: 32rem;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 35rem;
+opacity: 1rem;
   line-height: 2;
-  z-index: 0;
-  opacity: 0.2;
+ z-index: 2;
   color: var(--font-color);
   font-size: 5vw;
   letter-spacing: 5px;
   font-style: italic;
   text-align: center;
   white-space: nowrap;
+  white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
+  width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
+  padding: 0 1rem;                /* Kinaaron se thora fasla */
+  box-sizing: border-box;
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  will-change: opacity, transform !important; 
+  pointer-events: none !important;
 }
+/* 🔥 Light Mode ke liye Background Text (Watermark) ki setting 🔥 */
 
 /* SKILLS SECTION */
 .skillset-section {
@@ -1232,11 +1245,15 @@ body.light .footer-logo,
     padding: 10rem 2rem 10rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
     width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
     margin: 6rem auto !important;  /* Center mein laane ke liye */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  
   }
 
   /* 2. 'ABOUT' ki main heading ko thora chota kiya */
   .about-glass-container .main-heading {
     font-size: 4rem !important; 
+  
   }
 
   /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
@@ -1245,22 +1262,23 @@ body.light .footer-logo,
     line-height: 1.4 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
     margin-top: 20px !important;
     margin-bottom: 15px !important;
+    padding-top: 10px;
   }
 
   /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
-top: 42% !important;  /* Container ke bilkul darmiyan se thora oopar */
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    font-size: 3.5rem
+    top: 45rem !important;      /* Mobile ke hisaab se height oopar ki */
+    font-size: 3.5rem !important;
+  opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
+    z-index: 2 !important;
+    
   }
   
   .about-role {
-   top: 55% !important;  /* Container ke bilkul darmiyan se thora neechay */
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important; /* Perfect Center Trick */
-font-size: 1.8rem !important;
-    letter-spacing: 2px !important;
+ top: 55rem !important;      /* Name ke thora neechay */
+    font-size: 4rem !important;
+   opacity: 1rem; /* 🔥 Opacity barhayi */
+    z-index: 2 !important;
   }
 
 
