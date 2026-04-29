@@ -1226,7 +1226,7 @@ body.light .footer-logo,
 
   /* 1. About ke dabbe (Container) ka size aur space kam kiya */
   .about-glass-container {
-    padding: 8rem 2rem 8rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
+    padding: 10rem 2rem 10rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
     width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
     margin: 6rem auto !important;  /* Center mein laane ke liye */
   }
