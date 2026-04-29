@@ -1245,8 +1245,8 @@ opacity: 1rem;
     padding: 10rem 2rem 10rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
     width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
     margin: 6rem auto !important;  /* Center mein laane ke liye */
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   
   }
 
@@ -1268,7 +1268,7 @@ opacity: 1rem;
   /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
     top: 45rem !important;      /* Mobile ke hisaab se height oopar ki */
-    font-size: 3.5rem !important;
+    font-size: 3rem !important;
   opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
     z-index: 2 !important;
     
@@ -1276,7 +1276,7 @@ opacity: 1rem;
   
   .about-role {
  top: 55rem !important;      /* Name ke thora neechay */
-    font-size: 4rem !important;
+    font-size: 3rem !important;
    opacity: 1rem; /* 🔥 Opacity barhayi */
     z-index: 2 !important;
   }
