@@ -1226,7 +1226,7 @@ body.light .footer-logo,
 
   /* 1. About ke dabbe (Container) ka size aur space kam kiya */
   .about-glass-container {
-    padding: 4rem 2rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
+    padding: 6rem 3rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
     width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
     margin: 2rem auto !important;  /* Center mein laane ke liye */
   }
@@ -1234,9 +1234,9 @@ body.light .footer-logo,
   /* 2. 'ABOUT' ki main heading ko thora chota kiya */
   .about-glass-container .main-heading {
     font-size: 4rem !important; 
+  /* 3. Asal Text (Paragraphs) ka size chota aur padhne 
   }
-
-  /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
+mein asaan kiya */
   .about p {
     font-size: 2rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
     line-height: 1.4 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
