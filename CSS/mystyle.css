@@ -79,6 +79,7 @@ a {
   font-family: "Outfit", sans-serif;
   font-size: 4rem;
   font-weight: 800;
+
   color: var(--font-color);
   letter-spacing: 1px;
   cursor: pointer;
@@ -1221,20 +1222,39 @@ body.light .footer-logo,
   }
 
   /* About */
-  .about-section {
-    margin-top: 5rem;
-  }
+
+
+  /* 1. About ke dabbe (Container) ka size aur space kam kiya */
   .about-glass-container {
-    width: 95%;
-    margin: 2rem auto;
+    padding: 4rem 2rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
+    width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
+    margin: 2rem auto !important;  /* Center mein laane ke liye */
   }
+
+  /* 2. 'ABOUT' ki main heading ko thora chota kiya */
+  .about-glass-container .main-heading {
+    font-size: 3.2rem !important; 
+  }
+
+  /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
+  .about p {
+    font-size: 1.4rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
+    line-height: 1.6 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
+    margin-top: 20px !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
-    font-size: 5rem;
+    font-size: 4.5rem !important;
+    top: 30rem !important; /* Thora position set ki */
   }
+  
   .about-role {
-    font-size: 4rem;
-    letter-spacing: 2px;
+    font-size: 2.5rem !important;
+    top: 26rem !important;
   }
+
 
   /* Skills & Projects */
   .skill {
