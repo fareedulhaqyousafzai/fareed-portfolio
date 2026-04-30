@@ -672,8 +672,8 @@ opacity: 1rem;
 .project-card {
   flex: 1 1 0%;
   min-width: 0;
-  width: 90%;
-  height: 400px;
+  width: 80%;
+  height: 300px;
   border-radius: 18px;
   position: relative;
   overflow: hidden;
