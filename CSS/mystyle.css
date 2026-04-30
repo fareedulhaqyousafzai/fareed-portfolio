@@ -1304,9 +1304,9 @@ opacity: 1rem;
 
   .project-card {
     flex: none !important;
-    width: 60% !important; 
-    max-width: 200px !important; /* Card ka maximum size */
-    height: 350px !important;
+    width: 80% !important; 
+
+    height: 200px !important;
     margin: 0 auto !important; 
   }
   .project-card:hover {
