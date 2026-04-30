@@ -1304,7 +1304,7 @@ opacity: 1rem;
 
   .project-card {
     flex: none !important;
-    width: 100% !important; 
+    width: 90% !important; 
     max-width: 400px !important; /* Card ka maximum size */
     height: 350px !important;
     margin: 0 auto !important; 
