@@ -1,8 +1,4 @@
-window.addEventListener('load', function() {
-        const loader = document.getElementById('loader-wrapper');
-        // Loader ko chupa dain
-        loader.style.display = 'none';
-    });
+
 
 // Select the toggle button
 const toggleButton = document.getElementById("theme");
