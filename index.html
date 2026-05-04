@@ -276,4 +276,13 @@
     AOS.init();
   </script>
 </body>
+
+  <script>
+    // Jab window puri tarah load ho jaye
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader-wrapper');
+        // Loader ko chupa dain
+        loader.style.display = 'none';
+    });
+</script>
 </html>
