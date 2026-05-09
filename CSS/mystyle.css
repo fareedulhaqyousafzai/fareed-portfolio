@@ -1338,6 +1338,11 @@ opacity: 1rem;
     align-items: center;
   }
 
+.project-card{
+width: 80%;
+    height: 250px; /* Mobile par height thori
+}
+
   /* Card Size Adjustments */
   .project-card,
   .projects-grid:not(:hover) .project-card:nth-child(2) {
