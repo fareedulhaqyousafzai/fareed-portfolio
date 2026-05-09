@@ -79,7 +79,6 @@ a {
   font-family: "Outfit", sans-serif;
   font-size: 4rem;
   font-weight: 800;
-
   color: var(--font-color);
   letter-spacing: 1px;
   cursor: pointer;
@@ -98,12 +97,10 @@ a {
 }
 
 /* NAVBAR SECTION */
-
-/* Yeh code nav ul ki styling ke neechay add karein */
-  nav ul.nav-active {
-    display: flex;
-    flex-direction: column;
-  }
+nav ul.nav-active {
+  display: flex;
+  flex-direction: column;
+}
 .container-nav {
   width: 96%;
   border-radius: 10px;
@@ -154,7 +151,7 @@ nav li a:hover::after {
 
 /* DARK & LIGHT MODE TOGGLE */
 .theme_toggle {
-  display: none !important;
+  display: none;
 }
 .theme-switch .slider {
   width: 8em;
@@ -216,16 +213,16 @@ nav li a:hover::after {
   background-color: #181717;
 }
 .light-mode .github {
-  color: #181717 !important;
+  color: #181717;
 }
 .light-mode .title-card:hover #github-circle {
   background-color: #171515;
 }
 .light-mode .location-card:hover {
   transform: translateY(-5px);
-  background: rgba(0, 0, 0, 0.03) !important;
-  border-color: rgba(0, 0, 0, 0.15) !important;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 .light-mode .footer-section {
   background-color: rgba(0, 0, 0, 0.02);
@@ -389,7 +386,7 @@ body.light .footer-logo,
   display: flex;
   justify-content: center;
   position: relative;
-  z-index: 1 !important;
+  z-index: 1;
 }
 .about-glass-container {
   padding: 10rem 5rem;
@@ -402,7 +399,7 @@ body.light .footer-logo,
   max-width: 1700px;
   height: auto;
   position: relative;
-  z-index: 10
+  z-index: 10;
 }
 .about p {
   margin-top: 40px;
@@ -424,7 +421,7 @@ body.light .footer-logo,
 .about-name {
   position: absolute;
   top: 30rem;
-opacity: 1rem;
+  opacity: 1rem;
   z-index: 2;
   margin-top: 2rem;
   color: var(--main-color);
@@ -432,37 +429,34 @@ opacity: 1rem;
   letter-spacing: 5px;
   font-style: italic;
   text-align: center;
-  white-space: nowrap;
-  white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
-  width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
-  padding: 0 1rem;                /* Kinaaron se thora fasla */
+  white-space: normal;
+  width: 100%;
+  padding: 0 1rem;
   box-sizing: border-box;
-  transform: translateZ(0) !important;
-  -webkit-transform: translateZ(0) !important;
-  pointer-events: none !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  pointer-events: none;
 }
 .about-role {
   position: absolute;
   top: 35rem;
-opacity: 1rem;
+  opacity: 1rem;
   line-height: 2;
- z-index: 2;
+  z-index: 2;
   color: var(--font-color);
   font-size: 5vw;
   letter-spacing: 5px;
   font-style: italic;
   text-align: center;
-  white-space: nowrap;
-  white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
-  width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
-  padding: 0 1rem;                /* Kinaaron se thora fasla */
+  white-space: normal;
+  width: 100%;
+  padding: 0 1rem;
   box-sizing: border-box;
-  transform: translateZ(0) !important;
-  -webkit-transform: translateZ(0) !important;
-  will-change: opacity, transform !important; 
-  pointer-events: none !important;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  pointer-events: none;
 }
-/* 🔥 Light Mode ke liye Background Text (Watermark) ki setting 🔥 */
 
 /* SKILLS SECTION */
 .skillset-section {
@@ -587,32 +581,32 @@ opacity: 1rem;
   font-size: 8.5rem;
 }
 .bootstrap {
-  font-size: 9rem !important;
+  font-size: 9rem;
 }
 .git {
-  font-size: 9.5rem !important;
+  font-size: 9.5rem;
 }
 
 .html {
-  color: #e34f26 !important;
+  color: #e34f26;
 }
 .css {
-  color: #1572b6 !important;
+  color: #1572b6;
 }
 .javascript {
-  color: #f7df1e !important;
+  color: #f7df1e;
 }
 .react {
-  color: #61dafb !important;
+  color: #61dafb;
 }
 .bootstrap {
-  color: #7952b3 !important;
+  color: #7952b3;
 }
 .git {
-  color: #f05032 !important;
+  color: #f05032;
 }
 .github {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .title-card:hover {
@@ -629,7 +623,7 @@ opacity: 1rem;
 .title-card:hover .git,
 .title-card:hover .github {
   opacity: 0;
-  transform: scale(0) translateZ(0) rotateY(180deg) !important;
+  transform: scale(0) translateZ(0) rotateY(180deg);
 }
 .title-card:hover .title-circle p {
   opacity: 1;
@@ -665,7 +659,6 @@ opacity: 1rem;
   text-align: center;
   color: #fff;
   padding-top: 15rem;
- 
 }
 .projects-grid {
   display: flex;
@@ -860,9 +853,9 @@ opacity: 1rem;
     opacity 0.4s ease;
 }
 .project-actions a {
-  font-size: 1.3rem; /* Font size kafi bada kiya */
-  padding: 10px 16px; /* Padding zyada ki taake button choda (wide) lage */
-  border-radius: 12px; /* Pill shape */
+  font-size: 1.3rem;
+  padding: 10px 16px;
+  border-radius: 12px;
   font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
@@ -1060,7 +1053,7 @@ opacity: 1rem;
   display: none;
 }
 .beating-heart {
-  color: #ff3366 !important;
+  color: #ff3366;
   display: inline-block;
   animation: heartbeat 1.5s infinite;
 }
@@ -1083,7 +1076,7 @@ opacity: 1rem;
   }
 }
 .steaming-mug {
-  color: #00bfff !important;
+  color: #00bfff;
   display: inline-block;
   animation: bounceMug 2s infinite ease-in-out;
 }
@@ -1146,30 +1139,29 @@ opacity: 1rem;
   html {
     font-size: 45%;
   }
-.header-divider {
-    width: 60% !important; /* 50rem ki jagah percentage use karein taake mobile se bahar na jaye */
+  .header-divider {
+    width: 60%;
   }
   .custom-shape-divider-bottom-1716734170 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 90px;
-}
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+  }
 
   /* Navbar */
-
   nav ul.nav-active {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    gap: 0; /* 👇 YEH LINE ADD KAREIN gap khatam karne ke liye */
+    gap: 0;
   }
   .container-nav {
-    width: 90% !important;         /* Navbar ki width thori smart ki */
-    left: 0 !important;            /* 👈 In 3 lines se box PERFECT center hoga */
-    right: 0 !important;
-    margin: 0 auto !important;     
-    justify-content: space-between !important; /* Andar ki cheezon ko proper faasle par set karega */
-    padding: 0rem 4rem 0rem !important; /* Andar ki sides pe thori saans lene ki jagah */
+    width: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 0rem 4rem 0rem;
   }
   nav {
     display: flex;
@@ -1203,30 +1195,30 @@ opacity: 1rem;
   }
 
   #toggle_button {
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 9999999 !important;
-    width: 45px !important;
-    height: 45px !important;
-    font-size: 3rem !important;
+    z-index: 9999999;
+    width: 45px;
+    height: 45px;
+    font-size: 3rem;
     cursor: pointer;
     background: transparent;
     border: none;
     color: var(--font-color);
-    touch-action: manipulation !important;
+    touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
   }
   #toggle_button i,
   #toggle_button span {
-    pointer-events: none !important;
+    pointer-events: none;
   }
 
   /* Hero */
   .container-main {
     flex-direction: column-reverse;
-    justify-content:start;
+    justify-content: start;
     text-align: center;
     height: auto;
     min-height: 100vh;
@@ -1254,79 +1246,108 @@ opacity: 1rem;
   }
 
   /* About */
-
-
-  /* 1. About ke dabbe (Container) ka size aur space kam kiya */
   .about-glass-container {
-    padding: 5rem 2rem 10rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
-    width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
-    margin: 6rem auto !important;  /* Center mein laane ke liye */
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  
+    padding: 5rem 2rem 10rem;
+    width: 90%;
+    margin: 6rem auto;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
   }
-
-  /* 2. 'ABOUT' ki main heading ko thora chota kiya */
   .about-glass-container .main-heading {
-    font-size: 4rem !important; 
-  
+    font-size: 4rem;
   }
-
-  /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
   .about p {
-    font-size: 2rem !important;  /* Text ka size mobile ke liye bilkul perfect kar diya */
-    line-height: 1.4 !important;   /* Lines ke darmiyan thora sa gap diya taake saaf parha jaye */
-    margin-top: 20px !important;
-    margin-bottom: 15px !important;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 15px;
     padding-top: 10px;
   }
-
-  /* 4. Peechay jo dhundla text (Background Text) hai uska size kam kiya */
   .about-name {
-    top: 50rem !important;      /* Mobile ke hisaab se height oopar ki */
-    font-size: 4rem !important;
-  opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
-    z-index: 2 !important;
-    
+    top: 50rem;
+    font-size: 4rem;
+    opacity: 1rem;
+    z-index: 2;
   }
-  
   .about-role {
- top: 60rem !important;      /* Name ke thora neechay */
-    font-size: 3rem !important;
-   opacity: 1rem; /* 🔥 Opacity barhayi */
-    z-index: 2 !important;
+    top: 60rem;
+    font-size: 3rem;
+    opacity: 1rem;
+    z-index: 2;
   }
-
 
   /* Skills & Projects */
   .skill {
     width: 50%;
   }
- .projects-section {
-    width: 100% !important;
-    overflow-x: hidden !important; 
+  .projects-section {
+    width: 100%;
+    overflow-x: hidden;
   }
-
-  /* Grid ki width theek ki aur thori side padding di */
-.projects-grid {
-    flex-direction: column !important; /* 🔥 ASAL JADOO: Ye cards ko ek ke neechay ek kar dega */
-    align-items: center !important;    /* 🔥 Cards ko bilkul center mein layega */
-    gap: 40px !important;              /* Cards ke beech mein faasla */
-    width:90% !important;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 90%;
+    padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     box-sizing: border-box;
   }
-
-  .project-card {
-    flex: none !important;
-    width: 90% !important; 
-    max-width: 300px !important; /* Card ka maximum size */
-    height: 300px !important;
-    margin: 0 auto !important; 
+  .project-card,
+  .projects-grid:not(:hover) .project-card:nth-child(2) {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    height: 320px;
+    margin: 0 auto;
+    transform: translateY(0);
   }
   .project-card:hover {
-    transform: translateY(-5px);
+    flex: none;
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 180, 255, 0.25);
+  }
+  .project-browser {
+    height: 30px;
+    padding-left: 12px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+  }
+  .browser-title {
+    font-size: 1.1rem;
+    margin-right: 40px;
+  }
+  .project-overlay {
+    padding: 1.5rem 1rem;
+  }
+  .project-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  .project-overlay p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  .project-tags {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .project-tags span {
+    font-size: 1rem;
+    padding: 5px 12px;
+  }
+  .project-actions {
+    gap: 15px;
+  }
+  .project-actions a {
+    font-size: 1rem;
+    padding: 8px 18px;
+    border-radius: 8px;
+    gap: 8px;
   }
 
   /* Contact & Footer */
@@ -1337,83 +1358,5 @@ opacity: 1rem;
   }
   .footer-section {
     padding-top: 5rem;
-  }
-}
-/* =========================================
-   MOBILE RESPONSIVE (Max-Width: 800px)
-========================================= */
-@media (max-width: 800px) {
-  
-  /* Grid Adjustments */
-  .projects-grid {
-    flex-direction: column; /* Cards ko upar-neeche stack karega */
-    padding-top: 5rem; /* Top padding kam ki hai */
-    gap: 2rem;
-    align-items: center;
-  }
-
-  /* Card Size Adjustments */
-  .project-card,
-  .projects-grid:not(:hover) .project-card:nth-child(2) {
-    width: 100%;
-    height: 320px; /* Mobile par height thori choti ki hai */
-    flex: none; /* Mobile par hover expansion disable kiya taake layout kharab na ho */
-    transform: translateY(0);
-  }
-
-  /* Card Hover Effect on Mobile */
-  .project-card:hover {
-    flex: none; /* Mobile par width expand nahi hogi */
-    transform: translateY(-8px); /* Sirf halka sa upar uthega */
-    box-shadow: 0 25px 50px rgba(0, 180, 255, 0.25);
-  }
-
-  /* Browser Bar Adjustments */
-  .project-browser {
-    height: 30px; /* Bar ki height kam ki */
-    padding-left: 12px;
-  }
-  .dot {
-    width: 10px; /* Dots thore chote kiye */
-    height: 10px;
-    margin-right: 6px;
-  }
-  .browser-title {
-    font-size: 1.1rem; /* Title font size kam kiya */
-    margin-right: 40px;
-  }
-
-  /* Overlay & Typography Adjustments */
-  .project-overlay {
-    padding: 1.5rem 1rem;
-  }
-  .project-overlay h3 {
-    font-size: 1.8rem; /* Heading thori choti ki */
-    margin-bottom: 5px;
-  }
-  .project-overlay p {
-    font-size: 0.95rem; /* Paragraph/Subtitle font size adjust kiya */
-    margin-bottom: 20px;
-  }
-
-  /* Tags Adjustments */
-  .project-tags {
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .project-tags span {
-    font-size: 1rem; /* Tags ka font aur padding kam ki */
-    padding: 5px 12px;
-  }
-
-  /* Buttons / Actions Adjustments */
-  .project-actions {
-    gap: 15px;
-  }
-  .project-actions a {
-    font-size: 1rem; /* Button text chota kiya */
-    padding: 8px 18px; /* Padding thori balance ki taake pill shape barkarar rahe */
-    border-radius: 8px; 
-    gap: 8px;
   }
 }
