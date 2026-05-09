@@ -1,13 +1,8 @@
-
-
-// Select the toggle button
+// Theme Toggle Logic
 const toggleButton = document.getElementById("theme");
 
-// Listen for a click on the button
 toggleButton.addEventListener("click", function () {
-  // Toggle the dark-mode class on the body
   document.body.classList.toggle("light-mode");
-
   const isLightMode = document.body.classList.contains("light-mode");
   
   if (isLightMode) {
@@ -18,11 +13,11 @@ toggleButton.addEventListener("click", function () {
     document.documentElement.style.setProperty("--font-color", "#fff");
   }
 
-  // Save the user's preference in localStorage
+  // Save preference
   localStorage.setItem("lightMode", isLightMode);
 });
 
-// Text Effect
+// Typing Text Effect
 let i = 0;
 const text = "Front-End Developer!";
 const typing = function () {
@@ -36,22 +31,30 @@ const typing = function () {
 };
 typing();
 
+// Mobile Menu Toggle (Vanilla JS)
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburgerBtn = document.getElementById("toggle_button");
+  const navMenu = document.getElementById("nav-menu");
+  const navLinks = document.querySelectorAll("nav ul li a");
 
-$(document).ready(function () {
-  
-  // 1. Hamburger Icon par click karne ka code (Jo pehle se tha)
-  $("#toggle_button").click(function () {
-    $("nav ul").slideToggle(300);
-    $(this).toggleClass("fa-bars fa-xmark");
-  });
-
-  // 2. 🔥 NAYA JADOO: Kisi bhi Menu Link par click karne se menu khud band ho jaye 🔥
-  $("nav ul li a").click(function () {
-    // Ye check karega ke kya hum mobile screen par hain (yani hamburger button nazar aa raha hai)
-    if ($("#toggle_button").is(":visible")) {
-      $("nav ul").slideUp(300); // Menu ko wapas upar slide kar ke band kar dega
-      $("#toggle_button").removeClass("fa-xmark").addClass("fa-bars"); // 'X' ko hata kar wapas 3-lines le aayega
+  // Open/Close menu when clicking hamburger
+  hamburgerBtn.addEventListener("click", function () {
+    navMenu.classList.toggle("nav-active");
+    
+    if (hamburgerBtn.classList.contains("fa-bars")) {
+      hamburgerBtn.classList.replace("fa-bars", "fa-xmark");
+    } else {
+      hamburgerBtn.classList.replace("fa-xmark", "fa-bars");
     }
   });
 
+  // Close menu when a link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      if (window.getComputedStyle(hamburgerBtn).display !== "none") {
+        navMenu.classList.remove("nav-active");
+        hamburgerBtn.classList.replace("fa-xmark", "fa-bars");
+      }
+    });
+  });
 });
