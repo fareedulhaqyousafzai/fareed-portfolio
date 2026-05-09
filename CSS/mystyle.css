@@ -8,16 +8,13 @@
   font-family: "Urbanist", sans-serif;
   user-select: none;
 }
-
 ::selection {
   color: white;
   background: var(--main-color);
 }
-
 html {
   font-size: 50%;
 }
-
 body {
   transition: background-color 0.5s ease;
   background-color: var(--body);
@@ -34,16 +31,25 @@ body {
   --b-shadow-black-color: 0 4px 15px rgba(0, 0, 0, 0.3);
   --browser-bar: #2d2d2d;
   --browser-border: #2d2d2d;
-  --b-shadow-main-color-w-border: rgba(16, 149, 213, 0.5) 0px 6px 24px 0px, rgba(16, 149, 213, 0.8) 0px 0px 0px 1px;
-  --b-shadow-black-color-w-border: rgba(50, 56, 58, 0.5) 0px 6px 24px 0px, rgba(3, 4, 4, 0.8) 0px 0px 0px 0px;
+  --b-shadow-main-color-w-border:
+    rgba(16, 149, 213, 0.5) 0px 6px 24px 0px,
+    rgba(16, 149, 213, 0.8) 0px 0px 0px 1px;
+  --b-shadow-black-color-w-border:
+    rgba(50, 56, 58, 0.5) 0px 6px 24px 0px, rgba(3, 4, 4, 0.8) 0px 0px 0px 0px;
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
 }
-
-p, li, a {
+p,
+li,
+a {
   font-family: "Urbanist", sans-serif;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
@@ -61,7 +67,6 @@ p, li, a {
   font-weight: lighter;
   font-style: italic;
 }
-
 .header-divider {
   width: 50rem;
   height: 3px;
@@ -74,27 +79,31 @@ p, li, a {
   font-family: "Outfit", sans-serif;
   font-size: 4rem;
   font-weight: 800;
+
   color: var(--font-color);
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-
 .portfolio-logo .logo-dot {
   color: var(--main-color);
   transition: all 0.3s ease;
 }
-
 .portfolio-logo:hover {
   transform: scale(1.02);
 }
-
 .portfolio-logo:hover .logo-dot {
   color: #2db3f5;
   text-shadow: 0 0 12px rgba(16, 149, 213, 0.8);
 }
 
 /* NAVBAR SECTION */
+
+/* Yeh code nav ul ki styling ke neechay add karein */
+  nav ul.nav-active {
+    display: flex;
+    flex-direction: column;
+  }
 .container-nav {
   width: 96%;
   border-radius: 10px;
@@ -112,18 +121,15 @@ p, li, a {
   left: 2%;
   transition: transform 0.4s ease;
 }
-
 .container-nav:hover {
   transform: translateY(-6px);
   box-shadow: var(--b-shadow-black-color);
 }
-
 nav ul {
   display: flex;
   gap: 5rem;
   list-style: none;
 }
-
 nav li a {
   color: var(--main-color);
   font-weight: 700;
@@ -133,7 +139,6 @@ nav li a {
   position: relative;
   text-decoration: none;
 }
-
 nav li a::after {
   content: "";
   position: absolute;
@@ -143,7 +148,6 @@ nav li a::after {
   border-bottom: 0.3rem solid var(--main-color);
   transition: all 0.3s linear;
 }
-
 nav li a:hover::after {
   width: 100%;
 }
@@ -152,7 +156,6 @@ nav li a:hover::after {
 .theme_toggle {
   display: none !important;
 }
-
 .theme-switch .slider {
   width: 8em;
   height: 4em;
@@ -164,7 +167,6 @@ nav li a:hover::after {
   display: flex;
   align-items: center;
 }
-
 .theme-switch .slider i {
   font-size: 2em;
   position: absolute;
@@ -174,14 +176,12 @@ nav li a:hover::after {
   justify-content: center;
   line-height: 0;
 }
-
 .moon-icon {
   color: #cbd5e1;
   left: 0.6em;
   opacity: 1;
   transform: scale(1);
 }
-
 .sun-icon {
   color: #f1c40f;
   text-shadow: 0 0 12px rgba(241, 196, 15, 0.8);
@@ -189,17 +189,14 @@ nav li a:hover::after {
   opacity: 0;
   transform: scale(0.5);
 }
-
 .theme_toggle:checked + .slider .moon-icon {
   opacity: 0;
   transform: translateX(1.5em) scale(0.5);
 }
-
 .theme_toggle:checked + .slider .sun-icon {
   opacity: 1;
   transform: translateX(0) scale(1);
 }
-
 .theme_toggle:checked {
   background-color: var(--body);
 }
@@ -209,47 +206,37 @@ nav li a:hover::after {
   background-color: var(--body);
   color: var(--font-color);
 }
-
 .light-mode .content-section a {
   color: var(--body);
 }
-
 .light-mode .main-contact-btn::after {
   background-color: var(--font-color);
 }
-
 .light-mode #github-overlay {
   background-color: #181717;
 }
-
 .light-mode .github {
   color: #181717 !important;
 }
-
 .light-mode .title-card:hover #github-circle {
   background-color: #171515;
 }
-
 .light-mode .location-card:hover {
   transform: translateY(-5px);
   background: rgba(0, 0, 0, 0.03) !important;
   border-color: rgba(0, 0, 0, 0.15) !important;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08) !important;
 }
-
 .light-mode .footer-section {
   background-color: rgba(0, 0, 0, 0.02);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
-
 .light-mode .footer-para {
   color: #333333;
 }
-
 .light-mode .footer-built {
   color: #666666;
 }
-
 body.light .footer-logo,
 .light-mode .footer-logo {
   color: #222222;
@@ -265,7 +252,6 @@ body.light .footer-logo,
   align-items: center;
   justify-content: space-between;
 }
-
 .hero-img-container {
   position: relative;
   width: 320px;
@@ -274,7 +260,6 @@ body.light .footer-logo,
   justify-content: center;
   align-items: center;
 }
-
 .img-glow-bg {
   position: absolute;
   width: 100%;
@@ -285,7 +270,6 @@ body.light .footer-logo,
   animation: floatingBlob 8s ease-in-out infinite;
   z-index: 1;
 }
-
 .hero-img {
   position: relative;
   z-index: 2;
@@ -297,7 +281,6 @@ body.light .footer-logo,
   border: 4px solid var(--font-color);
   transition: transform 0.3s ease;
 }
-
 .hero-img:hover {
   transform: translateY(-10px) scale(1.02);
 }
@@ -318,15 +301,12 @@ body.light .footer-logo,
   width: 75%;
   height: auto;
 }
-
 .content-section a {
   text-decoration: none;
 }
-
 .content-section a:hover {
   color: var(--body);
 }
-
 .subheading {
   font-size: 6rem;
   font-weight: 500;
@@ -335,7 +315,6 @@ body.light .footer-logo,
   color: var(--font-color);
   margin-bottom: 0.5rem;
 }
-
 .heading {
   font-size: 8rem;
   font-weight: 800;
@@ -361,14 +340,12 @@ body.light .footer-logo,
   box-shadow: var(--b-shadow-main-color);
   color: var(--white-color);
 }
-
 .main-contact-btn:hover {
   background-color: var(--font-color);
   color: var(--dark-color);
   transform: translateY(-3px);
   box-shadow: var(--b-shadow-main-color-hover);
 }
-
 .main-contact-btn::after {
   content: "";
   position: absolute;
@@ -380,7 +357,6 @@ body.light .footer-logo,
   transition: height 0.3s ease;
   z-index: -1;
 }
-
 .main-contact-btn:hover::after {
   height: 100%;
 }
@@ -395,14 +371,12 @@ body.light .footer-logo,
   line-height: 0;
   transform: rotate(180deg);
 }
-
 .custom-shape-divider-bottom-1716734170 svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
   height: 150px;
 }
-
 .custom-shape-divider-bottom-1716734170 .shape-fill {
   fill: var(--main-color);
 }
@@ -417,7 +391,6 @@ body.light .footer-logo,
   position: relative;
   z-index: 1 !important;
 }
-
 .about-glass-container {
   padding: 10rem 5rem;
   box-shadow: var(--b-shadow-black-color);
@@ -429,9 +402,8 @@ body.light .footer-logo,
   max-width: 1700px;
   height: auto;
   position: relative;
-  z-index: 10;
+  z-index: 10
 }
-
 .about p {
   margin-top: 40px;
   font-size: 2.2rem;
@@ -442,7 +414,6 @@ body.light .footer-logo,
   margin-bottom: 2rem;
   text-transform: none;
 }
-
 .about span {
   color: var(--main-color);
   text-transform: uppercase;
@@ -450,11 +421,10 @@ body.light .footer-logo,
   margin: 0 2px;
   display: inline-block;
 }
-
 .about-name {
   position: absolute;
   top: 30rem;
-  opacity: 1rem;
+opacity: 1rem;
   z-index: 2;
   margin-top: 2rem;
   color: var(--main-color);
@@ -462,6 +432,7 @@ body.light .footer-logo,
   letter-spacing: 5px;
   font-style: italic;
   text-align: center;
+  white-space: nowrap;
   white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
   width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
   padding: 0 1rem;                /* Kinaaron se thora fasla */
@@ -470,25 +441,25 @@ body.light .footer-logo,
   -webkit-transform: translateZ(0) !important;
   pointer-events: none !important;
 }
-
 .about-role {
   position: absolute;
   top: 35rem;
-  opacity: 1rem;
+opacity: 1rem;
   line-height: 2;
-  z-index: 2;
+ z-index: 2;
   color: var(--font-color);
   font-size: 5vw;
   letter-spacing: 5px;
   font-style: italic;
   text-align: center;
+  white-space: nowrap;
   white-space: normal !important; /* 👈 Ye line text ko screen se bahar nikalne se rokegi aur next line mein bhej degi */
   width: 100% !important;         /* 👈 Ye text ko screen ki width ke andar lock kar dega */
   padding: 0 1rem;                /* Kinaaron se thora fasla */
   box-sizing: border-box;
   transform: translateZ(0) !important;
   -webkit-transform: translateZ(0) !important;
-  will-change: opacity, transform !important;
+  will-change: opacity, transform !important; 
   pointer-events: none !important;
 }
 /* 🔥 Light Mode ke liye Background Text (Watermark) ki setting 🔥 */
@@ -498,7 +469,6 @@ body.light .footer-logo,
   width: 100%;
   padding-top: 3rem;
 }
-
 .container-skillset {
   display: flex;
   justify-content: center;
@@ -506,7 +476,6 @@ body.light .footer-logo,
   flex-wrap: wrap;
   padding: 5rem;
 }
-
 .skill {
   display: flex;
   justify-content: center;
@@ -516,7 +485,6 @@ body.light .footer-logo,
   height: 200px;
   margin: 2rem 0;
 }
-
 .title-card {
   height: 14rem;
   width: 14rem;
@@ -529,7 +497,6 @@ body.light .footer-logo,
   position: relative;
   cursor: pointer;
 }
-
 .title-overlay {
   height: 6.7rem;
   width: 6.7rem;
@@ -537,13 +504,27 @@ body.light .footer-logo,
   transition: transform 0.3s ease-out;
 }
 
-#html-overlay { background-color: #e34f26; }
-#css-overlay { background-color: #1572b6; }
-#javascript-overlay { background-color: #f7df1e; }
-#react-overlay { background-color: #61dafb; }
-#bootstrap-overlay { background-color: #7952b3; }
-#git-overlay { background-color: #f05032; }
-#github-overlay { background-color: #ffffff; }
+#html-overlay {
+  background-color: #e34f26;
+}
+#css-overlay {
+  background-color: #1572b6;
+}
+#javascript-overlay {
+  background-color: #f7df1e;
+}
+#react-overlay {
+  background-color: #61dafb;
+}
+#bootstrap-overlay {
+  background-color: #7952b3;
+}
+#git-overlay {
+  background-color: #f05032;
+}
+#github-overlay {
+  background-color: #ffffff;
+}
 
 .title-circle {
   height: 13rem;
@@ -556,7 +537,6 @@ body.light .footer-logo,
   align-items: center;
   justify-content: center;
 }
-
 .title-circle::after {
   content: "";
   height: 11.5rem;
@@ -566,7 +546,6 @@ body.light .footer-logo,
   position: absolute;
   transition: opacity 0.3s ease-out;
 }
-
 .title-circle p {
   position: absolute;
   opacity: 0;
@@ -581,7 +560,13 @@ body.light .footer-logo,
   width: 100%;
 }
 
-.html, .css, .javascript, .react, .bootstrap, .git, .github {
+.html,
+.css,
+.javascript,
+.react,
+.bootstrap,
+.git,
+.github {
   z-index: 100;
   transform: scale(1) translateZ(0) rotateY(0deg);
   transition: all 0.3s ease-out;
@@ -590,29 +575,52 @@ body.light .footer-logo,
   justify-content: center;
   align-items: center;
 }
+.html,
+.css {
+  font-size: 8rem;
+}
+.javascript {
+  font-size: 7.5rem;
+}
+.react,
+.github {
+  font-size: 8.5rem;
+}
+.bootstrap {
+  font-size: 9rem !important;
+}
+.git {
+  font-size: 9.5rem !important;
+}
 
-.html, .css { font-size: 8rem; }
-.javascript { font-size: 7.5rem; }
-.react, .github { font-size: 8.5rem; }
-.bootstrap { font-size: 9rem !important; }
-.git { font-size: 9.5rem !important; }
-
-.html { color: #e34f26 !important; }
-.css { color: #1572b6 !important; }
-.javascript { color: #f7df1e !important; }
-.react { color: #61dafb !important; }
-.bootstrap { color: #7952b3 !important; }
-.git { color: #f05032 !important; }
-.github { color: #ffffff !important; }
+.html {
+  color: #e34f26 !important;
+}
+.css {
+  color: #1572b6 !important;
+}
+.javascript {
+  color: #f7df1e !important;
+}
+.react {
+  color: #61dafb !important;
+}
+.bootstrap {
+  color: #7952b3 !important;
+}
+.git {
+  color: #f05032 !important;
+}
+.github {
+  color: #ffffff !important;
+}
 
 .title-card:hover {
   transform: translateY(-10px) scale(1.005) translateZ(0);
 }
-
 .title-card:hover .title-overlay {
   transform: scale(2) translateZ(0);
 }
-
 .title-card:hover .html,
 .title-card:hover .css,
 .title-card:hover .javascript,
@@ -623,31 +631,40 @@ body.light .footer-logo,
   opacity: 0;
   transform: scale(0) translateZ(0) rotateY(180deg) !important;
 }
-
 .title-card:hover .title-circle p {
   opacity: 1;
   visibility: visible;
   transform: scale(1) translateZ(0) rotateY(0deg);
 }
-
 .title-card:hover .title-circle {
   border: 3px solid var(--body);
 }
 
 .title-card:hover #html-circle,
-.title-card:hover #git-circle { background-color: #f16529; }
-.title-card:hover #css-circle { background-color: #33a9dc; }
-.title-card:hover #javascript-circle { background-color: #f0db4f; }
-.title-card:hover #react-circle { background-color: #61dafb; }
-.title-card:hover #bootstrap-circle { background-color: #a07ce6; }
-.title-card:hover #github-circle { background-color: #ffffff; }
+.title-card:hover #git-circle {
+  background-color: #f16529;
+}
+.title-card:hover #css-circle {
+  background-color: #33a9dc;
+}
+.title-card:hover #javascript-circle {
+  background-color: #f0db4f;
+}
+.title-card:hover #react-circle {
+  background-color: #61dafb;
+}
+.title-card:hover #bootstrap-circle {
+  background-color: #a07ce6;
+}
+.title-card:hover #github-circle {
+  background-color: #ffffff;
+}
 
 /* PROJECTS SECTION */
 .projects-section {
   text-align: center;
   color: #fff;
 }
-
 .projects-grid {
   display: flex;
   gap: 3rem;
@@ -658,7 +675,6 @@ body.light .footer-logo,
   align-items: stretch;
   padding-top: 15rem;
 }
-
 .project-card {
   flex: 1 1 0%;
   min-width: 0;
@@ -674,14 +690,15 @@ body.light .footer-logo,
   box-shadow: var(--b-shadow-main-color);
   transform-style: preserve-3d;
   will-change: flex, transform;
-  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    flex 0.6s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   transform: translateY(-12px);
 }
-
 .projects-grid:not(:hover) .project-card:nth-child(2) {
   flex: 1.5 1 0%;
 }
-
 .project-card:hover {
   flex: 1.5 1 0%;
   transform: translateY(-12px);
@@ -701,18 +718,21 @@ body.light .footer-logo,
   background-color: color-mix(in srgb, var(--font-color) 50%, transparent);
   backdrop-filter: blur(10px);
 }
-
 .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   margin-right: 8px;
 }
-
-.red { background: #ff5f56; }
-.yellow { background: #ffbd2e; }
-.green { background: #27c93f; }
-
+.red {
+  background: #ff5f56;
+}
+.yellow {
+  background: #ffbd2e;
+}
+.green {
+  background: #27c93f;
+}
 .browser-title {
   flex: 1;
   text-align: center;
@@ -729,9 +749,10 @@ body.light .footer-logo,
   display: block;
   margin-top: 36px;
   filter: brightness(0.7) contrast(1.1);
-  transition: transform 6s ease, filter 0.4s ease;
+  transition:
+    transform 6s ease,
+    filter 0.4s ease;
 }
-
 .project-card:hover img {
   transform: translateY(-50%);
   filter: brightness(1) contrast(1);
@@ -747,29 +768,32 @@ body.light .footer-logo,
   align-items: center;
   text-align: center;
   z-index: 5;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.8) 50%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.8) 50%,
+    transparent 100%
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-
 .project-card:hover .project-overlay {
   opacity: 1;
 }
-
 .project-overlay h3,
 .project-overlay p {
   color: #ffffff;
   margin-bottom: 10px;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
-
 .project-overlay h3 {
   font-size: 2.2rem;
   font-weight: 700;
 }
-
 .project-overlay p {
   font-size: 1.1rem;
   color: #cccccc;
@@ -778,7 +802,6 @@ body.light .footer-logo,
   font-weight: 600;
   margin-bottom: 28px;
 }
-
 .project-card:hover .project-overlay h3,
 .project-card:hover .project-overlay p {
   transform: translateY(0);
@@ -794,9 +817,10 @@ body.light .footer-logo,
   justify-content: center;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
-
 .project-tags span {
   font-size: 1.4rem;
   padding: 6px 15px;
@@ -811,14 +835,12 @@ body.light .footer-logo,
   gap: 10px;
   transition: all 0.3s ease;
 }
-
 .project-tags span:hover {
   background: rgba(0, 132, 255, 0.25);
   border-color: rgba(0, 132, 255, 0.6);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .project-card:hover .project-tags {
   transform: translateY(0);
   opacity: 1;
@@ -831,9 +853,10 @@ body.light .footer-logo,
   justify-content: center;
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
-
 .project-actions a {
   font-size: 1.3rem; /* Font size kafi bada kiya */
   padding: 10px 16px; /* Padding zyada ki taake button choda (wide) lage */
@@ -852,25 +875,21 @@ body.light .footer-logo,
   background: var(--main-color);
   color: #ffffff;
 }
-
 .project-actions a:first-child:hover {
   transform: translateY(-4px);
   background: #ffffff;
   color: var(--dark-color);
 }
-
 .project-actions a:last-child {
   background: transparent;
   border: 1px solid #00bfff;
   color: #00bfff;
 }
-
 .project-actions a:last-child:hover {
   transform: translateY(-4px);
   background: #ffffff;
   color: var(--dark-color);
 }
-
 .project-card:hover .project-actions {
   transform: translateY(0);
   opacity: 1;
@@ -882,7 +901,6 @@ body.light .footer-logo,
   padding: 6rem 8%;
   position: relative;
 }
-
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -892,7 +910,6 @@ body.light .footer-logo,
   max-width: 1000px;
   margin-inline: auto;
 }
-
 .contact-card {
   background-color: color-mix(in srgb, var(--body) 70%, transparent);
   backdrop-filter: blur(8px);
@@ -912,19 +929,16 @@ body.light .footer-logo,
   width: 180px;
   box-shadow: var(--b-shadow-black-color);
 }
-
 .contact-card i {
   font-size: 2.8rem;
   color: var(--main-color);
   transition: all 0.4s ease;
 }
-
 .contact-card span {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
 }
-
 .contact-card:hover {
   transform: translateY(-8px);
   border-color: var(--main-color);
@@ -935,33 +949,27 @@ body.light .footer-logo,
   color: #0a66c2;
   filter: drop-shadow(0 0 8px #0a66c2);
 }
-
 .social-github:hover i {
   color: var(--font-color);
   filter: drop-shadow(0 0 8px);
 }
-
 .direct-whatsapp:hover i {
   color: #25d366;
   filter: drop-shadow(0 0 8px #25d366);
 }
-
 .direct-email:hover i {
   color: #ea4335;
   filter: drop-shadow(0 0 8px #ea4335);
 }
-
 .location-card {
   cursor: default;
 }
-
 .location-card:hover {
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: none;
 }
-
 .location-card:hover i {
   color: #ff3333;
   filter: drop-shadow(0 0 8px #ff3333);
@@ -976,7 +984,6 @@ body.light .footer-logo,
   margin-top: 6rem;
   text-align: center;
 }
-
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -985,7 +992,6 @@ body.light .footer-logo,
   gap: 12px;
   width: 100%;
 }
-
 .footer-para {
   font-size: 1.5rem;
   color: #cccccc;
@@ -994,7 +1000,6 @@ body.light .footer-logo,
   text-transform: none;
   font-style: normal;
 }
-
 .footer-logo {
   color: #ffffff;
   font-weight: 800;
@@ -1002,12 +1007,10 @@ body.light .footer-logo,
   letter-spacing: 1px;
   margin: 0 5px;
 }
-
 .footer-logo .logo-dot {
   color: var(--main-color);
   font-size: 1.3em;
 }
-
 .footer-built {
   font-size: 1.3rem;
   color: #888888;
@@ -1015,12 +1018,10 @@ body.light .footer-logo,
   letter-spacing: 1.5px;
   text-transform: none;
 }
-
 .footer-built i {
   margin: 0 5px;
   transition: transform 0.3s ease;
 }
-
 .footer-built i:hover {
   transform: scale(1.3) translateY(-2px);
 }
@@ -1045,7 +1046,6 @@ body.light .footer-logo,
   border: 4px solid var(--body);
   z-index: 10;
 }
-
 .scroll-top:hover {
   transform: translateX(-50%) translateY(-5px);
   background: #ffffff;
@@ -1057,43 +1057,58 @@ body.light .footer-logo,
 #toggle_button {
   display: none;
 }
-
 .beating-heart {
   color: #ff3366 !important;
   display: inline-block;
   animation: heartbeat 1.5s infinite;
 }
-
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  15% { transform: scale(1.3); }
-  30% { transform: scale(1); }
-  45% { transform: scale(1.3); }
-  60% { transform: scale(1); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.3);
+  }
+  60% {
+    transform: scale(1);
+  }
 }
-
 .steaming-mug {
   color: #00bfff !important;
   display: inline-block;
   animation: bounceMug 2s infinite ease-in-out;
 }
-
 @keyframes bounceMug {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-4px) rotate(8deg); }
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(8deg);
+  }
 }
-
 .pulsing-btn {
   box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
   animation: pulseRing 2s infinite;
 }
-
 @keyframes pulseRing {
-  0% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(16, 149, 213, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(16, 149, 213, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 149, 213, 0);
+  }
 }
-
 .pulsing-btn:hover {
   animation: none;
 }
@@ -1101,7 +1116,6 @@ body.light .footer-logo,
 ::-webkit-scrollbar {
   display: none;
 }
-
 * {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1126,24 +1140,27 @@ body.light .footer-logo,
   }
 }
 
-/* =========================================
-   MOBILE RESPONSIVE (Max-Width: 800px)
-========================================= */
 @media (max-width: 800px) {
   html {
     font-size: 45%;
   }
-  .header-divider {
+.header-divider {
     width: 60% !important; /* 50rem ki jagah percentage use karein taake mobile se bahar na jaye */
   }
   .custom-shape-divider-bottom-1716734170 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
-  }
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+}
 
   /* Navbar */
+
+  nav ul.nav-active {
+    display: flex; 
+    flex-direction: column;
+    gap: 0; /* 👇 YEH LINE ADD KAREIN gap khatam karne ke liye */
+  }
   .container-nav {
     width: 90% !important;         /* Navbar ki width thori smart ki */
     left: 0 !important;            /* 👈 In 3 lines se box PERFECT center hoga */
@@ -1207,7 +1224,7 @@ body.light .footer-logo,
   /* Hero */
   .container-main {
     flex-direction: column-reverse;
-    justify-content: start;
+    justify-content:start;
     text-align: center;
     height: auto;
     min-height: 100vh;
@@ -1236,18 +1253,21 @@ body.light .footer-logo,
 
   /* About */
 
+
   /* 1. About ke dabbe (Container) ka size aur space kam kiya */
   .about-glass-container {
     padding: 10rem 2rem 10rem !important; /* Pehle 10rem tha, usko kam kar ke box ko chota kiya */
     width: 90% !important;         /* Mobile screen ke hisaab se fit kiya */
     margin: 6rem auto !important;  /* Center mein laane ke liye */
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  
   }
 
   /* 2. 'ABOUT' ki main heading ko thora chota kiya */
   .about-glass-container .main-heading {
     font-size: 4rem !important; 
+  
   }
 
   /* 3. Asal Text (Paragraphs) ka size chota aur padhne mein asaan kiya */
@@ -1263,45 +1283,79 @@ body.light .footer-logo,
   .about-name {
     top: 50rem !important;      /* Mobile ke hisaab se height oopar ki */
     font-size: 4rem !important;
-    opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
+  opacity: 1rem;  /* 🔥 Opacity barhayi taake Glass ke peechay se nazar aaye */
     z-index: 2 !important;
+    
   }
   
   .about-role {
-    top: 60rem !important;      /* Name ke thora neechay */
+ top: 60rem !important;      /* Name ke thora neechay */
     font-size: 3rem !important;
-    opacity: 1rem; /* 🔥 Opacity barhayi */
+   opacity: 1rem; /* 🔥 Opacity barhayi */
     z-index: 2 !important;
   }
+
 
   /* Skills & Projects */
   .skill {
     width: 50%;
   }
-  .projects-section {
+ .projects-section {
     width: 100% !important;
     overflow-x: hidden !important; 
   }
 
   /* Grid ki width theek ki aur thori side padding di */
-  .projects-grid {
+.projects-grid {
     flex-direction: column !important; /* 🔥 ASAL JADOO: Ye cards ko ek ke neechay ek kar dega */
     align-items: center !important;    /* 🔥 Cards ko bilkul center mein layega */
     gap: 40px !important;              /* Cards ke beech mein faasla */
-    width: 100% !important;
+    width:90% !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     box-sizing: border-box;
-    padding-top: 5rem; /* Top padding kam ki hai */
   }
 
+  .project-card {
+    flex: none !important;
+    width: 90% !important; 
+    max-width: 300px !important; /* Card ka maximum size */
+    height: 300px !important;
+    margin: 0 auto !important; 
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Contact & Footer */
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .footer-section {
+    padding-top: 5rem;
+  }
+}
+/* =========================================
+   MOBILE RESPONSIVE (Max-Width: 800px)
+========================================= */
+@media (max-width: 800px) {
+  
+  /* Grid Adjustments */
+  .projects-grid {
+    flex-direction: column; /* Cards ko upar-neeche stack karega */
+    padding-top: 5rem; /* Top padding kam ki hai */
+    gap: 2rem;
+    align-items: center;
+  }
+
+  /* Card Size Adjustments */
   .project-card,
   .projects-grid:not(:hover) .project-card:nth-child(2) {
-    flex: none !important;
-    width: 100% !important; 
-    max-width: 400px !important; /* Card ka maximum size */
-    height: 320px !important; /* Mobile par height thori choti ki hai */
-    margin: 0 auto !important; 
+    width: 100%;
+    height: 320px; /* Mobile par height thori choti ki hai */
+    flex: none; /* Mobile par hover expansion disable kiya taake layout kharab na ho */
     transform: translateY(0);
   }
 
@@ -1359,15 +1413,5 @@ body.light .footer-logo,
     padding: 8px 18px; /* Padding thori balance ki taake pill shape barkarar rahe */
     border-radius: 8px; 
     gap: 8px;
-  }
-
-  /* Contact & Footer */
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
-  .footer-section {
-    padding-top: 5rem;
   }
 }
