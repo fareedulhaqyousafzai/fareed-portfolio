@@ -1465,3 +1465,87 @@ body.light .footer-logo,
   scrollbar-width: thin;
   scrollbar-color: var(--main-color) var(--body);
 }
+/* ======================================================= */
+/* MOBILE LANDSCAPE MODE FIX                               */
+/* ======================================================= */
+
+@media (max-width: 950px) and (max-height: 500px) and (orientation: landscape) {
+  
+  /* 1. Base Size & Spacing Reduce */
+  html {
+    font-size: 40%;
+  }
+
+  /* 2. Hero Section Fix (Remove 100vh strict limit) */
+  .container-main {
+    height: auto;
+    min-height: 100vh;
+    padding: 12rem 2rem 5rem 2rem; /* Upar se nav ke liye jagah chori hai */
+    flex-direction: row; /* Landscape mein side-by-side behtar lagta hai */
+    gap: 3rem;
+  }
+
+  .hero-img-container {
+    width: 180px;
+    height: 180px;
+  }
+
+  .heading {
+    font-size: 5rem;
+  }
+
+  .subheading {
+    font-size: 3rem;
+  }
+
+  /* 3. Mobile Menu Scroll Fix (Agar menu lamba ho jaye) */
+  nav ul {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  /* 4. Fix About Section Overlapping Text */
+  .about-section {
+    padding: 8rem 2rem;
+  }
+  
+  .about-glass-container {
+    padding: 4rem 2rem 6rem;
+    margin: 2rem auto;
+  }
+
+  /* Absolute position hata kar inko normal flow mein la rahe hain */
+  .about-name, 
+  .about-role {
+    position: relative;
+    top: auto;
+    margin-top: 1rem;
+    padding: 0;
+  }
+
+  .about-name {
+    font-size: 5rem;
+  }
+
+  .about-role {
+    font-size: 3rem;
+  }
+
+  /* 5. Reduce Extra Paddings in all sections */
+  .skillset-section, 
+  .projects-section, 
+  .contact-section {
+    padding-top: 5rem;
+  }
+
+  .projects-grid {
+    padding-top: 5rem;
+    gap: 3rem;
+  }
+
+  /* Projects ki height choti screen ke hisaab se adjust ki hai */
+  .project-card, 
+  .projects-grid:not(:hover) .project-card:nth-child(2) {
+    height: 220px; 
+  }
+}
