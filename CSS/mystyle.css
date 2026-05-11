@@ -1557,14 +1557,14 @@ body.light .footer-logo,
   
   /* 1. Wave shape ko chota aur neechay karein takay text par na aaye */
   .custom-shape-divider-bottom-1716734170 svg {
-    height: 50px !important; 
+    height: 30px !important; 
   }
 
   /* 2. Hero Section ko freely lamba hone dein aur top se jagah dain */
   .container-main {
     height: auto !important;
     min-height: 130vh !important; /* Is se wave bilkul neechay chali jayegi */
-    padding-top: 10rem !important; /* Navbar ke liye upar jagah chori hai */
+    padding-top: 5rem !important; /* Navbar ke liye upar jagah chori hai */
     padding-bottom: 8rem !important;
     flex-direction: row !important;
     gap: 2rem !important;
@@ -1585,8 +1585,8 @@ body.light .footer-logo,
 
   /* 4. Tasveer (Image) ko bhi landscape ke hisaab se chota karein */
   .hero-img-container {
-    width: 160px !important;
-    height: 160px !important;
+    width: 100px !important;
+    height: 100px !important;
   }
 
   /* 5. Navbar ko patla (sleek) karein takay screen block na ho */
