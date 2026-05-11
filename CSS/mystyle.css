@@ -1549,3 +1549,59 @@ body.light .footer-logo,
     height: 220px; 
   }
 }
+/* ======================================================= */
+/* MOBILE LANDSCAPE MODE FIX (SCREENSHOT ISSUE)            */
+/* ======================================================= */
+
+@media (max-width: 1000px) and (max-height: 600px) and (orientation: landscape) {
+  
+  /* 1. Wave shape ko chota aur neechay karein takay text par na aaye */
+  .custom-shape-divider-bottom-1716734170 svg {
+    height: 50px !important; 
+  }
+
+  /* 2. Hero Section ko freely lamba hone dein aur top se jagah dain */
+  .container-main {
+    height: auto !important;
+    min-height: 130vh !important; /* Is se wave bilkul neechay chali jayegi */
+    padding-top: 10rem !important; /* Navbar ke liye upar jagah chori hai */
+    padding-bottom: 8rem !important;
+    flex-direction: row !important;
+    gap: 2rem !important;
+  }
+
+  /* 3. Text aur Button ko chota karein takay overlap na hon */
+  .heading {
+    font-size: 5rem !important;
+  }
+  .subheading {
+    font-size: 3rem !important;
+  }
+  .main-contact-btn {
+    padding: 1.2rem 2rem !important;
+    font-size: 1.2rem !important;
+    margin-top: 1rem !important;
+  }
+
+  /* 4. Tasveer (Image) ko bhi landscape ke hisaab se chota karein */
+  .hero-img-container {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  /* 5. Navbar ko patla (sleek) karein takay screen block na ho */
+  .container-nav {
+    height: 5.5rem !important;
+    padding: 0 1.5rem !important;
+    top: 5px !important;
+  }
+  nav ul {
+    gap: 2rem !important;
+  }
+  nav li a {
+    font-size: 1.2rem !important;
+  }
+  .portfolio-logo {
+    font-size: 2.5rem !important;
+  }
+}
