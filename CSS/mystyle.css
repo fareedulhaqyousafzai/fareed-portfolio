@@ -1573,20 +1573,24 @@ body.light .footer-logo,
   /* 3. Text aur Button ko chota karein takay overlap na hon */
   .heading {
     font-size: 5rem !important;
+     margin-top: 0.2rem !important;
+    
   }
   .subheading {
     font-size: 3rem !important;
+     margin-top: 0.3rem !important;
   }
   .main-contact-btn {
     padding: 1.2rem 2rem !important;
     font-size: 1.2rem !important;
-    margin-top: 1rem !important;
+    margin-top: 0.5rem !important;
   }
 
   /* 4. Tasveer (Image) ko bhi landscape ke hisaab se chota karein */
   .hero-img-container {
     width: 100px !important;
     height: 100px !important;
+     margin-top: 0.5rem !important;
   }
 
   /* 5. Navbar ko patla (sleek) karein takay screen block na ho */
