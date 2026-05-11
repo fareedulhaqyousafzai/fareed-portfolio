@@ -1591,6 +1591,8 @@ body.light .footer-logo,
     width: 100px !important;
     height: 100px !important;
      margin-top: 0.5rem !important;
+    padding: 0rem !important;
+    
   }
 
   /* 5. Navbar ko patla (sleek) karein takay screen block na ho */
