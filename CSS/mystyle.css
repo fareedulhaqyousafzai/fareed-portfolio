@@ -39,17 +39,10 @@ body {
 }
 
 /* TYPOGRAPHY */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
-p,
-li,
-a {
+p, li, a {
   font-family: "Urbanist", sans-serif;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
@@ -498,27 +491,13 @@ body.light .footer-logo,
   transition: transform 0.3s ease-out;
 }
 
-#html-overlay {
-  background-color: #e34f26;
-}
-#css-overlay {
-  background-color: #1572b6;
-}
-#javascript-overlay {
-  background-color: #f7df1e;
-}
-#react-overlay {
-  background-color: #61dafb;
-}
-#bootstrap-overlay {
-  background-color: #7952b3;
-}
-#git-overlay {
-  background-color: #f05032;
-}
-#github-overlay {
-  background-color: #ffffff;
-}
+#html-overlay { background-color: #e34f26; }
+#css-overlay { background-color: #1572b6; }
+#javascript-overlay { background-color: #f7df1e; }
+#react-overlay { background-color: #61dafb; }
+#bootstrap-overlay { background-color: #7952b3; }
+#git-overlay { background-color: #f05032; }
+#github-overlay { background-color: #ffffff; }
 
 .title-circle {
   height: 13rem;
@@ -554,13 +533,7 @@ body.light .footer-logo,
   width: 100%;
 }
 
-.html,
-.css,
-.javascript,
-.react,
-.bootstrap,
-.git,
-.github {
+.html, .css, .javascript, .react, .bootstrap, .git, .github {
   z-index: 100;
   transform: scale(1) translateZ(0) rotateY(0deg);
   transition: all 0.3s ease-out;
@@ -569,45 +542,19 @@ body.light .footer-logo,
   justify-content: center;
   align-items: center;
 }
-.html,
-.css {
-  font-size: 8rem;
-}
-.javascript {
-  font-size: 7.5rem;
-}
-.react,
-.github {
-  font-size: 8.5rem;
-}
-.bootstrap {
-  font-size: 9rem;
-}
-.git {
-  font-size: 9.5rem;
-}
+.html, .css { font-size: 8rem; }
+.javascript { font-size: 7.5rem; }
+.react, .github { font-size: 8.5rem; }
+.bootstrap { font-size: 9rem; }
+.git { font-size: 9.5rem; }
 
-.html {
-  color: #e34f26;
-}
-.css {
-  color: #1572b6;
-}
-.javascript {
-  color: #f7df1e;
-}
-.react {
-  color: #61dafb;
-}
-.bootstrap {
-  color: #7952b3;
-}
-.git {
-  color: #f05032;
-}
-.github {
-  color: #ffffff;
-}
+.html { color: #e34f26; }
+.css { color: #1572b6; }
+.javascript { color: #f7df1e; }
+.react { color: #61dafb; }
+.bootstrap { color: #7952b3; }
+.git { color: #f05032; }
+.github { color: #ffffff; }
 
 .title-card:hover {
   transform: translateY(-10px) scale(1.005) translateZ(0);
@@ -635,24 +582,12 @@ body.light .footer-logo,
 }
 
 .title-card:hover #html-circle,
-.title-card:hover #git-circle {
-  background-color: #f16529;
-}
-.title-card:hover #css-circle {
-  background-color: #33a9dc;
-}
-.title-card:hover #javascript-circle {
-  background-color: #f0db4f;
-}
-.title-card:hover #react-circle {
-  background-color: #61dafb;
-}
-.title-card:hover #bootstrap-circle {
-  background-color: #a07ce6;
-}
-.title-card:hover #github-circle {
-  background-color: #ffffff;
-}
+.title-card:hover #git-circle { background-color: #f16529; }
+.title-card:hover #css-circle { background-color: #33a9dc; }
+.title-card:hover #javascript-circle { background-color: #f0db4f; }
+.title-card:hover #react-circle { background-color: #61dafb; }
+.title-card:hover #bootstrap-circle { background-color: #a07ce6; }
+.title-card:hover #github-circle { background-color: #ffffff; }
 
 /* PROJECTS SECTION */
 .projects-section {
@@ -663,8 +598,8 @@ body.light .footer-logo,
 .projects-grid {
   display: flex;
   gap: 3rem;
-  width: 100%;
-  max-width: 1650px;
+  width: 90%; /* 100% ki jagah 90% lagaya hai taake sides par space mile */
+  max-width: 1400px; /* Max-width thori kam ki hai taake LCD pe over-stretch na ho */
   margin: auto;
   perspective: 1200px;
   align-items: stretch;
@@ -719,15 +654,9 @@ body.light .footer-logo,
   border-radius: 50%;
   margin-right: 8px;
 }
-.red {
-  background: #ff5f56;
-}
-.yellow {
-  background: #ffbd2e;
-}
-.green {
-  background: #27c93f;
-}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
 .browser-title {
   flex: 1;
   text-align: center;
@@ -1058,22 +987,11 @@ body.light .footer-logo,
   animation: heartbeat 1.5s infinite;
 }
 @keyframes heartbeat {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  15% {
-    transform: scale(1.3);
-  }
-  30% {
-    transform: scale(1);
-  }
-  45% {
-    transform: scale(1.3);
-  }
-  60% {
-    transform: scale(1);
-  }
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.3); }
+  60% { transform: scale(1); }
 }
 .steaming-mug {
   color: #00bfff;
@@ -1081,28 +999,17 @@ body.light .footer-logo,
   animation: bounceMug 2s infinite ease-in-out;
 }
 @keyframes bounceMug {
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-4px) rotate(8deg);
-  }
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(8deg); }
 }
 .pulsing-btn {
   box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
   animation: pulseRing 2s infinite;
 }
 @keyframes pulseRing {
-  0% {
-    box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(16, 149, 213, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(16, 149, 213, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(16, 149, 213, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 149, 213, 0); }
 }
 .pulsing-btn:hover {
   animation: none;
@@ -1117,246 +1024,283 @@ body.light .footer-logo,
 }
 
 /* ========================================= */
-/* MEDIA QUERIES (RESPONSIVENESS)            */
+/* MEDIA QUERIES (RESPONSIVENESS UPGRADED)   */
 /* ========================================= */
 
-@media (max-width: 991px) {
-  html {
-    font-size: 45%;
+/* 1. Laptops / Small Desktops (e.g., 1360x768) */
+@media (max-width: 1400px) {
+  html { font-size: 50%; }
+  .container-main { padding: 8rem 5rem; }
+  .about-glass-container { width: 95%; padding: 8rem 4rem; }
+  
+  /* Scales the watermark text so it doesn't overflow */
+  .about-name { top: 20rem; font-size: 8vw; }
+  .about-role { top: 28rem; font-size: 4vw; }
+  
+  .skill { width: 33.33%; }
+  .projects-grid { padding-top: 10rem; }
+}
+
+/* 2. Tablets Landscape (e.g., 1024x768 iPad Pro) */
+@media (max-width: 1024px) {
+  html { font-size: 45%; }
+  .container-nav { width: 94%; padding: 1rem 2rem; }
+  nav ul { gap: 3rem; }
+  .heading { font-size: 7rem; }
+  .subheading { font-size: 4.5rem; }
+  .hero-img-container { width: 280px; height: 280px; }
+  .projects-grid { gap: 2rem; padding: 5rem 2rem; }
+}
+
+/* 3. Tablets Portrait & Mobile Menus (e.g., 768x1024) */
+@media (max-width: 800px) {
+  html { font-size: 45%; }
+  .header-divider { width: 60%; }
+  
+  /* Navbar Toggle Fixes */
+  .container-nav { padding: 0 3rem; left: 0; right: 0; margin: 0 auto; width: 92%;}
+  nav { position: absolute; right: 3rem; top: 8.5rem; width: auto; }
+  nav ul { 
+    display: none; 
+    flex-direction: column; 
+    background-color: color-mix(in srgb, var(--body) 95%, transparent);
+    padding: 1rem;
+    border-radius: 10px;
   }
+  nav ul.nav-active { display: flex; }
+  nav li a { padding: 1.5rem 2.5rem; font-size: 1.6rem; }
+  nav li a::after { display: none; }
+  #toggle_button { display: flex; cursor: pointer; color: var(--font-color); font-size: 3rem;}
+
+  /* Hero Section */
   .container-main {
-    padding: 5rem;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding: 12rem 2rem 5rem 2rem;
+    height: auto;
+    min-height: 100vh;
+    gap: 4rem;
   }
-  .project-item {
-    width: 40%;
+  .content-section { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .heading { font-size: 6rem; }
+  .hero-img-container { width: 250px; height: 250px; margin-bottom: 0; }
+
+  /* About Section Fix: Changes absolute positioning to document flow */
+  .about-section { padding: 8rem 2rem; display: flex; flex-direction: column; align-items: center; }
+  .about-name { position: relative; top: 0; font-size: 5rem; margin-bottom: 1rem; opacity: 0.6; }
+  .about-role { position: relative; top: 0; font-size: 2.5rem; margin-bottom: 3rem; opacity: 0.6; }
+  .about-glass-container { margin: 0 auto; padding: 5rem 2rem; width: 100%; }
+
+  /* Skills & Projects */
+  .skill { width: 50%; }
+  .projects-section { padding-top: 8rem; }
+  .projects-grid { flex-direction: column; align-items: center; gap: 4rem; padding-top: 5rem; }
+  .project-card, .projects-grid:not(:hover) .project-card:nth-child(2) {
+    width: 100%;
+    max-width: 400px;
+    height: 350px;
+    flex: none;
+    transform: translateY(0);
   }
-  .skill {
-    width: 33.33%;
+  .project-card:hover { transform: translateY(-8px); }
+}
+
+/* 4. Mobile Phones Portrait (e.g., 400px) */
+@media (max-width: 480px) {
+  html { font-size: 40%; } /* Shrinks all rem-based properties globally */
+  .container-nav { padding: 0 1.5rem; width: 90%; }
+  nav { right: 1.5rem; }
+  
+  .subheading { font-size: 3.5rem; }
+  .heading { font-size: 4.5rem; }
+  .hero-img-container { width: 200px; height: 200px; }
+  
+  .about-name { font-size: 4rem; }
+  .about p { font-size: 2.2rem; text-align: center; }
+  
+  /* Stack Skills vertically to prevent overlap */
+  .skill { width: 100%; margin: 1.5rem 0; }
+  .title-card { width: 14rem; height: 14rem; }
+  
+  .project-card, .projects-grid:not(:hover) .project-card:nth-child(2) { height: 300px; }
+  
+  .contact-container { flex-direction: column; align-items: center; gap: 1.5rem; }
+  .contact-card { width: 100%; max-width: 280px; }
+  
+  /* Keep the wave shape proportional */
+  .custom-shape-divider-bottom-1716734170 svg { height: 60px; }
+}
+
+/* 5. Mobile Landscape Fallback (Screen heights under 500px) */
+@media (max-height: 500px) and (orientation: landscape) {
+  .container-main {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    height: auto;
+    min-height: 100vh;
+    flex-direction: row; 
+    text-align: left;
+    justify-content: space-around;
+  }
+  .content-section { width: 50%; align-items: flex-start; }
+  .hero-img-container { width: 160px; height: 160px; margin-bottom: 0; }
+  
+  /* Hides the watermark text to save tight vertical space */
+  .about-name, .about-role { display: none; } 
+  
+  .projects-grid { flex-direction: row; flex-wrap: wrap; gap: 2rem; justify-content: center;}
+  .project-card, .projects-grid:not(:hover) .project-card:nth-child(2) { 
+     width: 45%; 
+     max-width: none; 
+     flex: 1 1 40%; 
+     height: 250px; 
   }
 }
 
-@media (max-width: 800px) {
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: 3px solid var(--body); /* Thora gap dene ke liye */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #2db3f5; /* Hover pe thora bright blue */
+}
+
+/* Firefox ke liye */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) var(--body);
+}
+
+/* ========================================= */
+/* MEDIA QUERIES (LARGE SCREENS Fix)         */
+/* ========================================= */
+
+/* Progressive scaling and containment starting from standard modern desktop screens */
+@media (min-width: 1400px) {
+  /* Scales typography slightly, but focuses layout on containment and proximity */
   html {
-    font-size: 45%;
-  }
-  .header-divider {
-    width: 60%;
-  }
-  .custom-shape-divider-bottom-1716734170 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 90px;
+    font-size: 55%; /* progressive upscaling from standard 50% */
   }
 
-  /* Navbar */
-  nav ul.nav-active {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .container-nav {
-    width: 90%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 0rem 4rem 0rem;
-  }
-  nav {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    right: 0.2rem;
-    top: 8.5rem;
-    margin-right: 0;
-    padding: 0;
-  }
-  nav ul {
-    display: none;
-    border-radius: 10px;
-    background-color: color-mix(in srgb, var(--body) 70%, transparent);
-    backdrop-filter: blur(20px);
-    padding: 0.1rem;
-    box-shadow: var(--b-shadow-black-color);
-  }
-  nav li a {
-    display: block;
-    padding: 1.5rem 3rem;
-    text-align: center;
-    font-size: 12px;
-  }
-  nav a:hover {
-    background-color: var(--font-color);
-    border-radius: 10px;
-  }
-  nav li a::after {
-    display: none;
+  /* Main structures constrainment gradually increases */
+  .container-nav,
+  main,
+  .projects-section,
+  .skillset-section,
+  .contact-section,
+  .footer-section {
+    max-width: 1920px; /* Modern ultra-wide constrainment focus for parent elements */
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* Maintain small margin of error on ultra-wides */
   }
 
-  #toggle_button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 9999999;
-    width: 45px;
-    height: 45px;
-    font-size: 3rem;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    color: var(--font-color);
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
-  }
-  #toggle_button i,
-  #toggle_button span {
-    pointer-events: none;
+  .projects-grid{
+    width: 70%;
+
   }
 
-  /* Hero */
+  /* DIAL DOWN Layout Density for better Proximity */
+  
+  /* Hero Section: constrains content area and dial downs gap/paddings relative to screen */
   .container-main {
-    flex-direction: column-reverse;
-    justify-content: start;
-    text-align: center;
-    height: auto;
-    min-height: 100vh;
-    padding: 25rem 2rem 10rem 2rem;
+    max-width: 1700px;
+    padding: 8rem 5rem;
+    gap: 4rem; /* Reduced massive gaps for tighter proximity on larger screens */
   }
   .content-section {
-    width: 100%;
-    margin-top: 1rem;
-  }
-  .heading {
-    font-size: 5rem;
-  }
-  .subheading {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    width: 60%; /* Tighter content constrains relative to parent */
   }
   .hero-img-container {
-    width: 220px;
-    height: 220px;
-    margin-bottom: 2rem;
-  }
-  .hero-img {
-    width: 80%;
-    height: auto;
+    width: 400px;
+    height: 400px; /* image size already constrained by width/height properties, good. padding dialed down */
   }
 
-  /* About */
-  .about-glass-container {
-    padding: 5rem 2rem 10rem;
-    width: 90%;
-    margin: 6rem auto;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-  }
-  .about-glass-container .main-heading {
-    font-size: 4rem;
-  }
-  .about p {
-    font-size: 2rem;
-    line-height: 1.4;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    padding-top: 10px;
-  }
+  /* About: watermark constrains on scaling */
   .about-name {
-    top: 50rem;
-    font-size: 4rem;
-    opacity: 1rem;
-    z-index: 2;
+    top: 25rem;
+    font-size: 10vw; /* progressive scaling watermark typography constrains scaling */
   }
   .about-role {
-    top: 60rem;
-    font-size: 3rem;
-    opacity: 1rem;
-    z-index: 2;
+    top: 35rem;
+    font-size: 5vw; /* progressive scaling watermark typography constrains scaling */
   }
 
-  /* Skills & Projects */
-  .skill {
-    width: 50%;
-  }
-  .projects-section {
-    width: 100%;
-    overflow-x: hidden;
-  }
+  /* Projects-grid: dial down gap and constrains project-card widths relative to content box */
   .projects-grid {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    width: 90%;
-    padding-top: 5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    box-sizing: border-box;
+    gap: 3rem; /* reduced massive gaps on large screens */
+    padding: 5rem 2rem;
+    max-width: 1650px; /* Constrains parent grid box */
   }
   .project-card,
   .projects-grid:not(:hover) .project-card:nth-child(2) {
-    flex: none;
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    transform: translateY(0);
-  }
-  .project-card:hover {
-    flex: none;
-    transform: translateY(-8px);
-    box-shadow: 0 25px 50px rgba(0, 180, 255, 0.25);
-  }
-  .project-browser {
-    height: 30px;
-    padding-left: 12px;
-  }
-  .dot {
-    width: 10px;
-    height: 10px;
-    margin-right: 6px;
-  }
-  .browser-title {
-    font-size: 1.1rem;
-    margin-right: 40px;
-  }
-  .project-overlay {
-    padding: 1.5rem 1rem;
-  }
-  .project-overlay h3 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-  }
-  .project-overlay p {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-  }
-  .project-tags {
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .project-tags span {
-    font-size: 1rem;
-    padding: 5px 12px;
-  }
-  .project-actions {
-    gap: 15px;
-  }
-  .project-actions a {
-    font-size: 1rem;
-    padding: 8px 18px;
-    border-radius: 8px;
-    gap: 8px;
+    max-width: 450px; /* constrains project-card widths so 3 column design stays dense in box */
+    flex: 1 1 0%;
   }
 
-  /* Contact & Footer */
-  .contact-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+  /* Flex components: constrain number of columns and maintain density focus (paddings/gaps reduction) */
+  .container-skillset {
+    gap: 2rem; /* reduced gap */
+    padding: 4rem 2rem; /* reduced density paddings relative to component percentage for tighter proximity of inner elements inside the main constrained main component container parent main component parent container main centered centered main centered main parent structure */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns maximum on wide screens in main centered main container structure parent parent main structure container container main main main structure structure parent main main structure parent */
+  }
+  .skill {
+    max-width: 25rem; /* constrained skill size */
+    margin: 1.5rem auto; /* center skills main component layout main main main structure main layout in centered container */
+  }
+
+  /* Contact and other sections already use some max-widths, good. Maintain padding reduction for balance inside main centered parent component parent center structure centered structure */
+  .contact-section {
+    padding: 10rem 4rem;
   }
   .footer-section {
-    padding-top: 5rem;
+    padding: 3rem 1.5rem;
   }
 }
+
+/* Final containment for Ultra-wide / 2k / 4k monitors and above parent main structure container main structure parent main component main parent main structure main structure parent structure */
+@media (min-width: 1920px) {
+  /* progressive scale watermark typography constrains progressive scale progressive scale watermark progressive scale progressive progressive watermark progressive scale progressive scale progressive progressive watermark progressive scale */
+  .about-name {
+    font-size: 190px; /* progressive progressive scale progressive scaled progressive progressive scale progressive scaled progressive progressive scale */
+  }
+  .about-role {
+    font-size: 96px; /* progressive scale watermark progressive scaled progressive progressive progressive scale watermark */
+  }
+
+  /* Dial padding down relative to parent width percentage inside modern constrained structure centered structure parent parent structure parent container parent center parent center center structure parent parent main structure main centered center parent container container structure center */
+  .container-main {
+    padding: 6rem 4rem;
+  }
+  .about-section {
+    padding: 12rem 2rem;
+  }
+  .projects-section {
+    padding: 6rem 2rem;
+  }
+  .skillset-section {
+    padding: 6rem 2rem;
+  }
+  .contact-section {
+    padding: 8rem 2rem;
+  }
+  .footer-section {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ========================================= */
+/* CUSTOM SCROLLBAR (Existing code continues) */
+/* ========================================= */
