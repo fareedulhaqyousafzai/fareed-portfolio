@@ -1592,6 +1592,12 @@ body.light .footer-logo,
     height: 100px !important;
      margin-top: 0.5rem !important;
     padding: 0rem !important;
+
+     position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
     
   }
 
