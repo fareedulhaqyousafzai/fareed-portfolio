@@ -1140,7 +1140,6 @@ body.light .footer-logo,
     width: 33.33%;
   }
 }
-
 @media (max-width: 800px) {
   html {
     font-size: 45%;
@@ -1289,6 +1288,7 @@ body.light .footer-logo,
   .projects-section {
     width: 100%;
     overflow-x: hidden;
+    
   }
   .projects-grid {
     flex-direction: column;
@@ -1299,13 +1299,14 @@ body.light .footer-logo,
     padding-left: 1rem;
     padding-right: 1rem;
     box-sizing: border-box;
+    gap:5rem;
   }
   .project-card,
   .projects-grid:not(:hover) .project-card:nth-child(2) {
     flex: none;
     width: 100%;
-    max-width: 300px;
-    height: 320px;
+    max-width: 280px;
+    height: 280px;
     margin: 0 auto;
     transform: translateY(0);
   }
