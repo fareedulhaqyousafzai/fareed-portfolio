@@ -1468,28 +1468,22 @@ body.light .footer-logo,
   z-index: 1;
 }
 .about-glass-container {
-  padding: 10rem 5rem;
-  box-shadow: var(--b-shadow-black-color);
-  background-color: color-mix(in srgb, var(--body) 70%, transparent);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 20px;
-  width: 90%;
-  max-width: 1700px;
-  height: auto;
-  position: relative;
-  z-index: 10;
+ 
+ height: 300px;
+ padding: 2rem;
+ 
+  
 }
 
 .about-name {
   position: absolute;
-  top: 35rem;
+  top: 25rem;
   font-size: 5rem;
  
 }
 .about-role {
   position: absolute;
-  top: 45rem;
+  top: 30rem;
   font-size: 5rem;
 
 
