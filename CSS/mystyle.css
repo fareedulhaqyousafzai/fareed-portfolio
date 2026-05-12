@@ -112,7 +112,7 @@ nav ul.nav-active {
   background-color: color-mix(in srgb, var(--body) 70%, transparent);
   backdrop-filter: blur(12px);
   z-index: 10000;
-  padding: 1rem;
+  padding: 2rem;
   position: fixed;
   top: 20px;
   left: 2%;
@@ -1438,7 +1438,7 @@ body.light .footer-logo,
     height: 5.5rem !important;
     padding: 0 1.5rem !important;
     top: 5px !important;
-    width: 100%;
+    width: 96%;
   }
   nav ul {
     gap: 2rem !important;
@@ -1455,37 +1455,69 @@ body.light .footer-logo,
   /* ABOUT SECTION FIX (Inside Landscape)      */
   /* ========================================= */
 
-  .about-section {
-    padding: 6rem 2rem !important; /* Extra spacing khatam ki */
-  }
-
-  .about-glass-container {
-    padding: 3rem 2rem !important;
-    margin: 0 auto !important; /* Center mein rakhne ke liye */
-  }
-
-  .about p {
-    font-size: 1.6rem !important; /* Text chota kiya landscape ke liye */
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-  }
-
   /* MAIN FIX: Text ko wapas box ke andar lane ke liye */
-  .about-name,
-  .about-role {
-    position: relative !important; 
-    top: auto !important; /* Jo top: 35rem/50rem tha usko khatam kiya */
-    padding: 0 !important;
-  }
+  
 
-  .about-name {
-    font-size: 3.5rem !important;
-    margin-top: 1rem !important;
-  }
+  .about-section {
+  width: 100%;
+  padding: 15rem 2rem;
+  background-color: var(--body);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.about-glass-container {
+  padding: 10rem 5rem;
+  box-shadow: var(--b-shadow-black-color);
+  background-color: color-mix(in srgb, var(--body) 70%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1700px;
+  height: auto;
+  position: relative;
+  z-index: 10;
+}
 
-  .about-role {
-    font-size: 2rem !important;
-    margin-top: 0.5rem !important;
-    line-height: 1.5 !important;
-  }
+.about-name {
+  position: absolute;
+  top: 35rem;
+  opacity: 1rem;
+  z-index: 2;
+  margin-top: 2rem;
+  color: var(--main-color);
+  font-size: clamp(6rem, 10vw, 10rem);
+  letter-spacing: 5px;
+  font-style: italic;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  pointer-events: none;
+}
+.about-role {
+  position: absolute;
+  top: 45rem;
+  opacity: 1rem;
+  line-height: 2;
+  z-index: 2;
+  color: var(--font-color);
+  font-size: 5vw;
+  letter-spacing: 5px;
+  font-style: italic;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  will-change: opacity, transform;
+  pointer-events: none;
+}
 }
