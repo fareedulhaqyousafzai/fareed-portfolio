@@ -1458,7 +1458,7 @@ body.light .footer-logo,
   /* MAIN FIX: Text ko wapas box ke andar lane ke liye */
   
 
-  .about-section {
+  /* .about-section {
   width: 100%;
   padding: 15rem 2rem;
   background-color: var(--body);
@@ -1466,11 +1466,11 @@ body.light .footer-logo,
   justify-content: center;
   position: relative;
   z-index: 1;
-}
+} */
 .about-glass-container {
  
  height: 300px;
- padding: 2rem;
+ padding: 1rem;
  
   
 }
