@@ -1278,8 +1278,37 @@ body.light .footer-logo,
 
   /* Skills & Projects */
   .skill {
-    width: 50%;
+    width: 40%;
   }
+  .skillset-section{
+    font-size: 1rem;
+  }
+
+.skillset-section {
+  width: 100%;
+  padding-top: 5rem;
+}
+.container-skillset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  height: 200px;
+  margin: 2rem 0;
+}
+
+
+
+
+  
   .projects-section {
     width: 100%;
     overflow-x: hidden;
